@@ -1,0 +1,56 @@
+/* for bootstrap */
+
+/* .navbar-brand {
+    font-family: 'Faster One', cursive;
+} */
+
+/* custom  */
+.logo {
+    height: 50px;
+    width: 40px;
+}
+
+.bg-makara {
+    background-color: #655B50;
+}
+
+.bg-bokara-grey {
+    background-color: #1C1A18;
+}
+
+.bg-bisque {
+    background-color: #FFE2C7;
+}
+
+
+.bg-selective-yellow {
+    background-color: #FFBA00;
+}
+
+.bg-lighty {
+    background-color: #F4F3F0;
+}
+
+
+/* Buttons */
+
+.btn-makara {
+    color: #fff;
+    background-color:#655B50;
+    border-color: #655B50
+ }
+  
+.btn-makara:hover {
+    color: #fff;
+    background-color: #5c5248;
+    border-color:  #5c5248;
+}
+  
+.btn-makara:focus,
+.btn-makara.focus {
+    color: #fff;
+    background-color: #5c5248;
+    border-color:  #5c5248;
+    box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}
+
