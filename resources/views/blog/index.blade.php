@@ -1,34 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-
-   {{-- Alerts --}}
-   @if (\Session::has('danger'))
-   <div id="element" class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" style="width: 450px;">
-    <h6>{{ \Session::get('danger') }}</h6>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-   </div>
-   @endif
-
-   @if (\Session::has('success'))
-   <div id="element" class="container alert alert-success alert-dismissible fade show mt-5" role="alert" style="width: 450px;">
-    <h6>{{ \Session::get('success') }}</h6>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-      </button>
-   </div>
-   @endif
-  {{-- end of alerts --}}
-
    <div class="container p-3 mt-3">
+        {{-- Alerts --}}
+      @if (\Session::has('danger'))
+      <div id="element" class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" style="width: 450px;">
+        <h6>{{ \Session::get('danger') }}</h6>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      @endif
+
+      @if (\Session::has('success'))
+      <div id="element" class="container alert alert-success alert-dismissible fade show mt-5" role="alert" style="width: 450px;">
+        <h6>{{ \Session::get('success') }}</h6>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      @endif
+      {{-- end of alerts --}}
       <div class="row d-flex flex-row justify-content-center align-items-center">
         <div class="col-12">
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
               <div class="card-body text-truncate">
-                  <p class="text-muted font-weight-bold">{{$post->name}}<span class="ml-2">{{$post->created_at}}</span></p>
+                  <p class="text-muted font-weight-bold">{{$post->name}}<span class="ml-2">{{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }}</span></p>
                   <p class="badge badge-success">{{$post->topic}}</p>
                   <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
                   <p class="card-text">{{$post->body}}</p>

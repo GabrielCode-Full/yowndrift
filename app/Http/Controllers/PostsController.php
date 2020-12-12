@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
-
+use Carbon\Carbon;
 
 class PostsController extends Controller
 {
@@ -22,6 +22,7 @@ class PostsController extends Controller
      */
     public function index()
     {
+
         $user = Auth::user();
 
         $posts = DB::table('users')
@@ -56,13 +57,15 @@ class PostsController extends Controller
             'title' => ['required','string','min:5','max:70'],
             'body' => ['required','string','min:50'],
         ]);
+        
+        $date = Carbon::now();
+        $day = $date->format('m-d-Y');
 
         $post = new Post;
         $post->user_id = Auth::id();
         $post->topic = $request->input('topic');
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-
         $post->save();
 
         return redirect("/blog")->with('success', 'Your post has been created');
