@@ -27,14 +27,15 @@
  </div>
 
  
-   <div class="container p-3 mt-3">
+   <div class="container p-5 p-sm-3 mt-1 mt-sm-3">
       <div class="row d-flex flex-row justify-content-center align-items-center">
-         <div class="col-6">
+         <div class="d-none d-sm-block col-6">
             <img class="h-75 w-75" src="{{ asset('img/logo/blogging.svg') }}" alt="">
          </div>
-         <div class="col-6 text-left">
-            <h1 class="font-weight-bold">Share your ideas with us.</h1>
-            <p class="text-muted">Explore or Give knowledge to a specific knowledge.</p>
+         <div class="col-xs-12 col-sm-6 text-center text-sm-left">
+            <h1 class="h1 font-weight-bold">Built for Bloggers.</h1>
+            <p class="text-muted">Anyone can share their knowledge on a specific knowledge.</p>
+            <a href="/login" class="btn btn-blue d-block d-sm-inline">Get Started</a>
          </div>
       </div>
    </div>

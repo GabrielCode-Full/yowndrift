@@ -10,6 +10,7 @@ use Carbon\Carbon;
 
 class PostsController extends Controller
 {
+    
     public function home()
     {
         return view('layouts.home');
@@ -28,6 +29,7 @@ class PostsController extends Controller
         $posts = DB::table('users')
         ->join('posts', 'posts.user_id', '=', 'users.id')
         // ->where('id', 'LIKE', '%' . Auth::user()->id .  '%')
+        ->orderBy('posts.created_at', 'desc')
         ->get();
         
         return view('blog.index', ["posts" => $posts]);
@@ -57,9 +59,6 @@ class PostsController extends Controller
             'title' => ['required','string','min:5','max:70'],
             'body' => ['required','string','min:50'],
         ]);
-        
-        $date = Carbon::now();
-        $day = $date->format('m-d-Y');
 
         $post = new Post;
         $post->user_id = Auth::id();

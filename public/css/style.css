@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* for bootstrap */
 
 /* .navbar-brand {
@@ -5,9 +7,22 @@
 } */
 
 /* custom  */
+*{
+    font-family: 'Roboto', sans serif;
+}
+
 .logo {
     height: 50px;
     width: 40px;
+}
+
+.bg-blue {
+    background-color: #5158dd;
+}
+
+.bg-light-blue {
+    /* background-color: #5f2570; */
+    background-color: #464cc2;
 }
 
 .bg-makara {
@@ -17,11 +32,6 @@
 .bg-bokara-grey {
     background-color: #1C1A18;
 }
-
-.bg-bisque {
-    background-color: #FFE2C7;
-}
-
 
 .bg-selective-yellow {
     background-color: #FFBA00;
@@ -54,3 +64,42 @@
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 
+.btn-blue {
+    color: #fff;
+    background-color: #5158dd;
+    border-color:  #5158dd;
+ }
+  
+.btn-blue:hover {
+    color: #fff;
+    background-color: #464cc2;
+    border-color:  #464cc2;
+}
+  
+.btn-blue:focus,
+.btn-blue.focus {
+    color: #fff;
+    background-color: #464cc2;
+    border-color:  #464cc2;
+    box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}
+
+.btn-dark-green {
+    color: #fff;
+    background-color:#28a745;
+    border-color:#28a745;
+}
+  
+.btn-dark-green:hover {
+    color: #fff;
+    background-color: #22863a;
+    border-color: #22863a;
+}
+
+.btn-dark-green:focus,
+.btn-dark-green.focus {
+    color: #fff;
+    background-color:  #22863a;
+    border-color:   #22863a;
+    box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}

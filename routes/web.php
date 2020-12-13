@@ -24,4 +24,6 @@ Route::resources([
     '/account' => AccountsController::class
     ]);
 
+Route::resource('/blog', PostsController::class)->only(['index'])->middleware('auth');
+
 Auth::routes();

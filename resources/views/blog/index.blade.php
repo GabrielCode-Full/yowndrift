@@ -4,7 +4,7 @@
    <div class="container p-3 mt-3">
         {{-- Alerts --}}
       @if (\Session::has('danger'))
-      <div id="element" class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" style="width: 450px;">
+      <div id="element" class="container alert alert-danger alert-dismissible fade show mt-5" role="alert">
         <h6>{{ \Session::get('danger') }}</h6>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -13,7 +13,7 @@
       @endif
 
       @if (\Session::has('success'))
-      <div id="element" class="container alert alert-success alert-dismissible fade show mt-5" role="alert" style="width: 450px;">
+      <div id="element" class="container alert alert-success alert-dismissible fade show mt-5" role="alert">
         <h6>{{ \Session::get('success') }}</h6>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -26,7 +26,7 @@
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
               <div class="card-body text-truncate">
-                  <p class="text-muted font-weight-bold">{{$post->name}}<span class="ml-2">{{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }}</span></p>
+                  <p class="text-black font-weight-bold">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="text-primary ml-1">{{$post->name}}</span></p>
                   <p class="badge badge-success">{{$post->topic}}</p>
                   <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
                   <p class="card-text">{{$post->body}}</p>
@@ -57,17 +57,17 @@
 <div class="modal fade" id="Write" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="WriteLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header bg-lighty border-bottom-0">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body bg-lighty">
         <form action="/blog" method="POST">
           @csrf
           <div class="form-group">
-
-              <input type="text" class="form-control @error('topic') is-invalid @enderror" id="topic" placeholder="#topic" name="topic" autofocus style="border-top:none;">
+              <label for="topic"><span class="badge badge-dark mx-1">#Technology</span><span class="badge badge-dark mx-1">#Science</span><span class="badge badge-dark mx-1">#Health</span><span class="badge badge-dark mx-1">#Society</span></label>
+              <input type="text" class="form-control rounded-0 @error('topic') is-invalid @enderror" id="topic" placeholder="#Topic" name="topic" autofocus style="border-top:none;">
 
               @error('topic')
                 <span class="invalid-feedback" role="alert">
@@ -75,7 +75,7 @@
                 </span>
               @enderror
 
-              <input type="text" class="form-control font-weight-bold  @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" autofocus style="border-bottom:none;">
+              <input type="text" class="form-control rounded-0 @error('title') is-invalid @enderror" id="title" placeholder="Title" name="title" autofocus style="border-bottom:none;">
 
               @error('title')
                 <span class="invalid-feedback" role="alert">
@@ -83,7 +83,7 @@
                 </span>
               @enderror
 
-              <textarea class="form-control @error('body') is-invalid @enderror" id="text-area" rows="3" name="body" autofocus style="border-top:none; border-bottom:none;"></textarea>
+              <textarea class="form-control rounded-0 @error('body') is-invalid @enderror" id="text-area" rows="5" placeholder="Your text here" name="body" autofocus style="border-top:none; border-bottom:none;"></textarea>
 
               @error('body')
                 <span class="invalid-feedback" role="alert">
@@ -92,8 +92,8 @@
               @enderror
 
           </div>
-          <div class="form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="form-group d-flex justify-content-end align-items-end">
+              <button type="submit" class="btn btn-blue rounded-circle"><i class="far fa-paper-plane"></i></button>
           </div>
         </form>
       </div>
