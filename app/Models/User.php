@@ -12,6 +12,11 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
 
+    public function users_information()
+    {
+        return $this->hasOne(UserInformation::class);
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);

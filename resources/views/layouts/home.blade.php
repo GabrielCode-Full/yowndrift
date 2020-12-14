@@ -33,9 +33,13 @@
             <img class="h-75 w-75" src="{{ asset('img/logo/blogging.svg') }}" alt="">
          </div>
          <div class="col-xs-12 col-sm-6 text-center text-sm-left">
-            <h1 class="h1 font-weight-bold">Built for Bloggers.</h1>
-            <p class="text-muted">Anyone can share their knowledge on a specific knowledge.</p>
+          <h1 class="h1 font-weight-bold">Built for Bloggers.</h1>
+          <p class="text-muted">Anyone can share their knowledge on a specific knowledge.</p>
+          @if (Auth::guest())
             <a href="/login" class="btn btn-blue d-block d-sm-inline">Get Started</a>
+          @else
+            <a href="/blog" class="btn btn-blue d-block d-sm-inline">Get Started</a>
+          @endif
          </div>
       </div>
    </div>

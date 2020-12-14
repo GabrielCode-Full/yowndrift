@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Models\UserInformation;
+use Carbon\Carbon;
 
 class AccountsController extends Controller
 {
-    
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -19,7 +23,9 @@ class AccountsController extends Controller
      */
     public function index()
     {
-        return view('accounts.index');
+        $user_information = Auth::user()->users_information;
+
+        return view('accounts.index', ['user_information' => $user_information]);
     }
 
     /**
@@ -29,7 +35,7 @@ class AccountsController extends Controller
      */
     public function create()
     {
-        //
+        return view('accounts.create');
     }
 
     /**
@@ -40,7 +46,23 @@ class AccountsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $validatedData = $request->validate([
+            'firstname' => ['required', 'string', 'min:5', 'max:50'],
+            'lastname' => ['required', 'string', 'min:5', 'max:50'],
+            'middlename' => ['required', 'string', 'min:5', 'max:50'],
+            'contact' => ['required', 'string', 'min:10', 'max:20'],
+        ]);
+
+        $user_information = new UserInformation;
+        $user_information->user_id = Auth::id();
+        $user_information->firstname = $request->input('firstname');
+        $user_information->lastname = $request->input('lastname');
+        $user_information->middlename = $request->input('middlename');
+        $user_information->contact = $request->input('contact');
+        $user_information->save();
+
+        return redirect("account")->with('success', 'Your profile has been created');
     }
 
     /**
@@ -72,9 +94,24 @@ class AccountsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_information_id)
     {
-        //
+        $validatedData = $request->validate([
+            'firstname' => ['required', 'string', 'min:5', 'max:50'],
+            'lastname' => ['required', 'string', 'min:5', 'max:50'],
+            'middlename' => ['required', 'string', 'min:5', 'max:50'],
+            'contact' => ['required', 'string', 'min:10', 'max:20'],
+        ]);
+
+        $user_information = UserInformation::find($user_information_id);
+        $user_information->user_id = Auth::id();
+        $user_information->firstname = $request->input('firstname');
+        $user_information->lastname = $request->input('lastname');
+        $user_information->middlename = $request->input('middlename');
+        $user_information->contact = $request->input('contact');
+        $user_information->save();
+
+        return redirect("account")->with('success', 'Your profile has been updated');
     }
 
     /**

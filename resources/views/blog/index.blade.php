@@ -26,11 +26,11 @@
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
               <div class="card-body text-truncate">
-                  <p class="text-black font-weight-bold">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="text-primary ml-1">{{$post->name}}</span></p>
-                  <p class="badge badge-success">{{$post->topic}}</p>
+                  <p class="card-name-date text-black font-weight-bold">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$post->name}}</span></p>
+                  <p class="badge badge-dark">{{$post->topic}}</p>
                   <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
                   <p class="card-text">{{$post->body}}</p>
-                  <a href="#">Read more...</a>
+                  <a href="/blog/{{$post->post_id}}" class="btn btn-blue">Read content</a>
                 </div>
             </div>
             @empty

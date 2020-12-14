@@ -3,19 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Post;
-use Carbon\Carbon;
 
-class PostsController extends Controller
+class UsersInformation extends Controller
 {
-    
-    public function home()
-    {
-        return view('layouts.home');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -23,17 +13,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-
-        $user = Auth::user();
-
-        $posts = DB::table('users')
-        ->join('posts', 'posts.user_id', '=', 'users.id')
-        // ->where('id', 'LIKE', '%' . Auth::user()->id .  '%')
-        ->orderBy('posts.created_at', 'desc')
-        ->get();
-        
-        return view('blog.index', ["posts" => $posts]);
-        
+        //
     }
 
     /**
@@ -54,20 +34,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'topic' => ['required','string'],
-            'title' => ['required','string','min:5','max:70'],
-            'body' => ['required','string','min:50'],
-        ]);
-
-        $post = new Post;
-        $post->user_id = Auth::id();
-        $post->topic = $request->input('topic');
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->save();
-
-        return redirect("/blog")->with('success', 'Your blog has been posted');
+        //
     }
 
     /**
@@ -76,14 +43,9 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($post_id)
+    public function show($id)
     {
-        $posts = DB::table('users')
-        ->join('posts', 'posts.user_id', '=', 'users.id')
-        ->where('post_id', 'LIKE', '%' . $post_id .  '%')
-        ->get();
-        
-        return view('blog.show', ["posts" => $posts]);
+        //
     }
 
     /**

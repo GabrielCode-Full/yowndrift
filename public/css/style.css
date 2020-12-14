@@ -30,7 +30,7 @@
 }
 
 .bg-bokara-grey {
-    background-color: #1C1A18;
+    background-color: #363635;
 }
 
 .bg-selective-yellow {
@@ -102,4 +102,25 @@
     background-color:  #22863a;
     border-color:   #22863a;
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}
+
+/* custom nav pills */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #363635;
+}
+
+/* custom card-header */
+.card-header {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card-name-date {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* custom navbar-brand */
+.navbar-brand {
+    font-family: 'Roboto Mono', monospace;
 }

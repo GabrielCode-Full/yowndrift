@@ -50,15 +50,15 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">
-                                Dashboard
+                                <i class="fas fa-chalkboard mr-3"></i>Dashboard
                              </a>
                             <a class="dropdown-item" href="/account">
-                               Account
+                                <i class="far fa-user-circle mr-3"></i>Account
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                <i class="fas fa-sign-out-alt mr-3"></i>{{ __('Logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
