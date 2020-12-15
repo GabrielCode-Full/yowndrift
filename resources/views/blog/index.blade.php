@@ -25,11 +25,11 @@
         <div class="col-12">
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
-              <div class="card-body text-truncate">
+              <div class="card-body">
                   <p class="card-name-date text-black font-weight-bold">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$post->name}}</span></p>
                   <p class="badge badge-dark">{{$post->topic}}</p>
                   <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
-                  <p class="card-text">{{$post->body}}</p>
+                  <p class="card-text text-truncate">{{$post->body}}</p>
                   <a href="/blog/{{$post->post_id}}" class="btn btn-blue">Read content</a>
                 </div>
             </div>
@@ -39,19 +39,6 @@
         </div>
       </div>
    </div>
-   {{-- <div class="container">
-   <form action="/blog" method="POST">
-    <div class="form-group">
-        <input type="text" class="form-control" id="title" placeholder="Title" name="title" style="border-bottom:none;">
-        <textarea class="form-control" id="text-area" rows="3" name="body" style="border-top:none; border-bottom:none;"></textarea>
-        <input type="text" class="form-control" id="title" placeholder="#topic" name="title" style="border-top:none;">
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
-</div> --}}
-
 
 <!-- Modal -->
 <div class="modal fade" id="Write" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="WriteLabel" aria-hidden="true">

@@ -21,20 +21,20 @@
       </div>
       @endif
       {{-- end of alerts --}}
-    <div class="row">
-       <div class="col-3">
-          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <div class="row d-flex flex-column flex-md-row">
+       <div class="col-11 col-md-3 p-3 p-md-0 mx-auto">
+          <div class="nav flex-column nav-pills border shadow-sm" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link disabled d-flex flex-column" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>{{Auth::user()->name}}</span><span><small>Personal Settings</small></span></a>
              <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-             {{-- <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false">Account</a>
-             <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> --}}
+             <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false">Account</a>
+             {{-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> --}}
           </div>
        </div>
-       <div class="col-9">
+       <div class="col-11 col-md-9 mx-auto">
              <div class="tab-content bg-light" id="v-pills-tabContent">
                 <div class="tab-pane fade show active border p-3 shadow-sm" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 @if(isset($user_information))
-                   {{-- @foreach($users_information as $user_information) --}}
-                    <h3 class="card-name-date text-light-blue font-weight-bold">Profile Information</h3>
+                    <h4 class="card-name-date text-light-blue font-weight-bold">Profile Information</h4>
                     <hr>
                       <form>
                          <div class="form-group row">
@@ -80,13 +80,13 @@
                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
                          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                          <div class="modal-content">
-                             <div class="modal-header bg-bokara-grey text-light">
+                             <div class="modal-header bg-bokara-grey text-light border-0">
                              <h6 class="modal-title" id="exampleModalLongTitle">Update your profile</h6>
                              <a href="#" class="close text-light" data-dismiss="modal" aria-label="Close">
                                  <span aria-hidden="true"><i class="fas fa-times"></i></span>
                              </a>
                              </div>
-                             <div class="modal-body">
+                             <div class="modal-body border-0">
                                                  <form action="/account/{{$user_information->user_information_id}}" method="POST">
                                                      @method('PUT')
                                                      @csrf
@@ -152,13 +152,12 @@
                                                          </div>
                                                      </div>
                                                  </form>
-                                            {{-- @endforeach --}}
                              </div>
                          </div>
                          </div>
                      </div>
                     @else
-                    <h3 class="card-name-date text-light-blue font-weight-bold">Profile Information</h3>
+                    <h4 class="card-name-date text-light-blue font-weight-bold">Profile Information</h4>
                     <hr>
                     <p class="mb-3">Would you like to add your additional information?</p>
                     <a href= "/account/create"class="btn btn-blue">Add profile</a>

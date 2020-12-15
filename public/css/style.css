@@ -107,8 +107,17 @@
 /* custom nav pills */
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #363635;
+  color: #363635;
+  /* background-color: #363635; */
+  background-color:#ffffff;
+  border-left: 5px #28a745 solid;
+}
+
+.nav-link.disabled {
+  color: #caced1;
+  background-color:#363635;
+  pointer-events: none;
+  cursor: default;
 }
 
 /* custom card-header */
