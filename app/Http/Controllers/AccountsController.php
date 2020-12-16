@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\UserInformation;
+use App\Models\Post;
 use Carbon\Carbon;
 
 class AccountsController extends Controller
@@ -122,6 +123,33 @@ class AccountsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Auth::user()->posts
+        $post = Auth::user()->posts;
+        $user_info = Auth::user()->users_information;
+        $user = Auth::user();
+
+        if(isset($post) and isset($user_info)) {
+
+            $post->each->delete();
+            $user_info->delete();
+            $user->delete();
+
+        } elseif(!isset($post) and isset($user_info)) {
+
+            $user_info->delete();
+            $user->delete();
+
+        } elseif(isset($post) and !isset($user_info)) {
+
+            $post->each->delete();
+            $user->delete();
+
+        } else {
+
+            $user->delete();
+            
+        }
+
+        return redirect("/home");
     }
 }

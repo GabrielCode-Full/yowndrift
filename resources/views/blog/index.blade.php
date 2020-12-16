@@ -4,7 +4,7 @@
    <div class="container p-3 mt-3">
         {{-- Alerts --}}
       @if (\Session::has('danger'))
-      <div id="element" class="container alert alert-danger alert-dismissible fade show mt-5" role="alert">
+      <div id="element" class="container alert alert-danger alert-dismissible fade show" role="alert">
         <h6>{{ \Session::get('danger') }}</h6>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -13,8 +13,8 @@
       @endif
 
       @if (\Session::has('success'))
-      <div id="element" class="container alert alert-success alert-dismissible fade show mt-5" role="alert">
-        <h6>{{ \Session::get('success') }}</h6>
+      <div id="element" class="container alert alert-light alert-dismissible fade show" role="alert">
+        <h6><i class="mr-1 fas fa-check-circle text-success"></i>{{ \Session::get('success') }}</h6>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
@@ -25,13 +25,21 @@
         <div class="col-12">
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
-              <div class="card-body">
-                  <p class="card-name-date text-black font-weight-bold">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$post->name}}</span></p>
-                  <p class="badge badge-dark">{{$post->topic}}</p>
-                  <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
-                  <p class="card-text text-truncate">{{$post->body}}</p>
-                  <a href="/blog/{{$post->post_id}}" class="btn btn-blue">Read content</a>
-                </div>
+              <div class="card-body d-flex flex-column flex-md-row">
+                  @if($post->topic == "#Technology")
+                    <img src="/img/logo/blogging.svg" class="h-25 w-25 d-block mx-auto" alt="...">
+                  @else
+                    <img src="/img/logo/add_notes.svg" class="h-25 w-25 d-block mx-auto" alt="...">
+                  @endif
+                  <div class="overflow-hidden">
+                    <p class="card-name-date text-black font-weight-bold"><small class="card-name-date">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$post->name}}</span></small></p>
+                    <p class="badge badge-dark">{{$post->topic}}</p>
+                    <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
+                    <p class="card-text text-truncate">{{$post->body}}</p>
+                    <a href="/blog/{{$post->post_id}}" class="btn btn-outline-blue">Read content</a>
+                  </div>
+
+              </div>
             </div>
             @empty
             <h1 class="text-center font-weight-bold">Wow! Such empty.</h1>

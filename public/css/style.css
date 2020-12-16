@@ -84,6 +84,7 @@
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 
+
 .btn-dark-green {
     color: #fff;
     background-color:#28a745;
@@ -104,18 +105,33 @@
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 
+.btn-outline-blue {
+  color: #5158dd;
+  border-color: #5158dd;
+}
+
+.btn-outline-blue:hover {
+  color: #fff;
+  background-color: #5158dd;
+  border-color: #5158dd;
+}
+
+.btn-outline-blue:focus,
+.btn-outline-blue.focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+}
+
 /* custom nav pills */
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #363635;
-  /* background-color: #363635; */
   background-color:#ffffff;
   border-left: 5px #28a745 solid;
 }
 
 .nav-link.disabled {
-  color: #caced1;
-  background-color:#363635;
+  color:#363635;
+  background-color:#ffffff;
   pointer-events: none;
   cursor: default;
 }

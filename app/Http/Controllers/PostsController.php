@@ -67,7 +67,7 @@ class PostsController extends Controller
         $post->body = $request->input('body');
         $post->save();
 
-        return redirect("/blog")->with('success', 'Your blog has been posted');
+        return redirect("/blog")->with('success', 'Your post has been published');
     }
 
     /**

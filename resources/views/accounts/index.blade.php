@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mb-5 p-2 p-lg-5">
-          {{-- Alerts --}}
+<div class="container mb-5 p-2 p-lg-5 overflow-hidden">
+           {{-- Alerts --}}
       @if (\Session::has('danger'))
-      <div id="element" class="container alert alert-danger alert-dismissible fade show mt-5" role="alert">
+      <div id="element" class="container alert alert-danger alert-dismissible fade show" role="alert">
         <h6>{{ \Session::get('danger') }}</h6>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -13,8 +13,8 @@
       @endif
 
       @if (\Session::has('success'))
-      <div id="element" class="container alert alert-success alert-dismissible fade show mt-5" role="alert">
-        <h6>{{ \Session::get('success') }}</h6>
+      <div id="element" class="container alert alert-light alert-dismissible fade show" role="alert">
+        <h6><i class="mr-1 fas fa-check-circle text-success"></i>{{ \Session::get('success') }}</h6>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
@@ -163,8 +163,8 @@
                     <a href= "/account/create"class="btn btn-blue">Add profile</a>
                    @endif
                 </div>
-                {{-- <div class="tab-pane fade border p-3" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
-                    <h2 class="text-danger font-weight-bold">Delete Account</h2>
+                <div class="tab-pane fade border p-3" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
+                    <h4 class="card-name-date text-danger font-weight-bold">Delete Account</h4>
                     <hr>
                     <p>Once you delete your account, there is no going back. Please be certain.</p>
                     <form action="/account/{{ Auth::id() }}" method="POST">
@@ -172,7 +172,7 @@
                          <button type="submit" class="btn btn-outline-danger">Delete your account</button>
                      @csrf
                      </form>
-                 </div> --}}
+                 </div>
                 {{-- <div class="tab-pane fade border p-3" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus molestiae asperiores unde, rerum dolorem odit non iusto recusandae in quis! Enim mollitia, sed quae, facilis ea in tenetur minus nam sint explicabo qui asperiores quod, eum voluptatum! Dolorum, quos rem.</div> --}}
              </div>
           </div>
