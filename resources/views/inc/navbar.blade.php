@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-bokara-grey">
     <div class="container">
         <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
-            <img class="logo" src="{{ asset('img/logo/project_logo_yellow.png') }}" alt="Yowndrift logo">
+            <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
