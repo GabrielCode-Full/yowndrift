@@ -41,6 +41,9 @@
     background-color: #F4F3F0;
 }
 
+.bg-dark-green {
+    background-color: #28a745;
+}
 
 /* Buttons */
 
@@ -149,3 +152,11 @@
 .navbar-brand {
     font-family: 'Roboto Mono', monospace;
 }
+
+@media (max-width: 576px) {
+
+    .img-custom {
+        height: 50% !important;
+        width: 50% !important;
+    }
+}    

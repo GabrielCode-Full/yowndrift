@@ -17,10 +17,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Explore</a>
                 </li>
-                @auth
-                    <li class="nav-item">
+                <li class="nav-item">
                         <a class="nav-link" href="/blog">Blog</a>
-                    </li>
+                </li>
+                @auth
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Write</a>
                     </li>
