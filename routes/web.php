@@ -17,7 +17,9 @@ use App\Http\Controllers\PostsController;
 
 Route::redirect('/', '/home', 301);
 
-Route::get("/home", [PostsController::class, "home"])->name("/home");
+Route::get("/home", [PostsController::class, "home"])->name("home");
+
+Route::get("/explore", [PostsController::class, "explore"])->name("explore");
 
 Route::resources([
     '/blog' => PostsController::class,

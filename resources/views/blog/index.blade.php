@@ -58,7 +58,20 @@
               </div>
             </div>
             @empty
-              <h1 class="text-center font-weight-bold">Wow! Such empty.</h1>
+            <div class="row my-3">
+              <div class="col-sm-12">
+                  <div class="card shadow-sm">
+                    <div class="card-body d-flex flex-row justify-content-center align-items-center">
+                      <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
+                      <div class="p-3 p-sm-0">
+                          <h1 class="card-title font-weight-bold">No post found</h1>
+                          <p class="card-text">Would you like to share your knowledge to everyone?</p>
+                          <a href="#" class="btn btn-dark-green d-block d-sm-inline" data-toggle="modal" data-target="#Write">Write a post</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
             @endforelse
         </div>
       </div>

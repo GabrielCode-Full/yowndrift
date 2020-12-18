@@ -41,6 +41,7 @@
         <main class="py-4 bg-lighty">
             @yield('content')
         </main>
+        @include('inc.footer')
     </div>
 </body>
 </html>

@@ -34,7 +34,7 @@
              <div class="tab-content bg-light" id="v-pills-tabContent">
                 <div class="tab-pane fade show active border p-3 shadow-sm" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 @if(isset($user_information))
-                    <h4 class="card-name-date text-light-blue font-weight-bold">Profile Information</h4>
+                    <h4 class="text-light-blue font-weight-bold">Profile Information</h4>
                     <hr>
                       <form>
                          <div class="form-group row">
@@ -157,14 +157,14 @@
                          </div>
                      </div>
                     @else
-                    <h4 class="card-name-date text-light-blue font-weight-bold">Profile Information</h4>
+                    <h4 class="text-light-blue font-weight-bold">Profile Information</h4>
                     <hr>
                     <p class="mb-3">Would you like to add your additional information?</p>
                     <a href= "/account/create"class="btn btn-blue">Add profile</a>
                    @endif
                 </div>
-                <div class="tab-pane fade border p-3" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
-                    <h4 class="card-name-date text-danger font-weight-bold">Delete Account</h4>
+                <div class="tab-pane fade border p-3 shadow-sm" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
+                    <h4 class="text-danger font-weight-bold">Delete Account</h4>
                     <hr>
                     <p>Once you delete your account, there is no going back. Please be certain.</p>
                     <form action="/account/{{ Auth::id() }}" method="POST">

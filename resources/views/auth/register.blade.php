@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8 mx-3 mx-md-0">
+        <div class="col-md-8">
             <div class="card shadow-sm">
                 <div class="card-header text-center font-weight-bold bg-bokara-grey text-light">Join Yowndrift</div>
 

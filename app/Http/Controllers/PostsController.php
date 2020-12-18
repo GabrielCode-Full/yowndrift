@@ -16,6 +16,11 @@ class PostsController extends Controller
         return view('layouts.home');
     }
 
+    public function explore()
+    {
+        return view('explore.index');
+    }
+
     /**
      * Display a listing of the resource.
      *
