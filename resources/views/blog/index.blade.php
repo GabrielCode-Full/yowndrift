@@ -39,11 +39,11 @@
                       <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>
                   @elseif(strtoupper($post->topic) == "#HEALTH")
-                    <div class="bg-lighty d-flex justify-content-center align-items-center">
+                    <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
                       <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>
                   @else
-                    <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
+                    <div class="bg-makara d-flex justify-content-center align-items-center">
                     <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>
                   @endif
@@ -61,10 +61,10 @@
             <div class="row my-3">
               <div class="col-sm-12">
                   <div class="card shadow-sm">
-                    <div class="card-body d-flex flex-row justify-content-center align-items-center">
+                    <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
                       <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
-                      <div class="p-3 p-sm-0">
-                          <h1 class="card-title font-weight-bold">No post found</h1>
+                      <div class="p-2 p-sm-0">
+                          <h1 class="card-title font-weight-bold text-center text-md-left card-name-date">No post found</h1>
                           <p class="card-text">Would you like to share your knowledge to everyone?</p>
                           <a href="#" class="btn btn-dark-green d-block d-sm-inline" data-toggle="modal" data-target="#Write">Write a post</a>
                       </div>
