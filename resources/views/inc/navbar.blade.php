@@ -27,6 +27,22 @@
                 @endauth
             </ul>
 
+            <ul class="navbar-nav mx-auto" id="hide-search">
+                <li class="nav-item">                 
+                    <form class="form-inline" action="/blog" style="position: relative;">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" type="search" name="search" placeholder="#Topic and Title" aria-label="Search" style="width: 250px;">
+                        </div>
+
+                        <div class="form-group form-button-search">
+                            <button type="submit" class="btn btn-blue btn-sm">
+                                <i class="fas fa-search"></i> 
+                            </button>
+                        </div>
+                      </form>          
+                </li>
+            </ul>
+
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->

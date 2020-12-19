@@ -153,6 +153,19 @@
     font-family: 'Roboto Mono', monospace;
 }
 
+.form-button-search {
+    position: absolute; 
+    right: 0%;
+}
+
+@media (max-width: 767px) {
+
+    .form-button-search {
+        right: 50%;
+    }
+
+}
+
 @media (max-width: 576px) {
 
     .img-custom {
@@ -162,5 +175,9 @@
 
     .card-explore {
         height: auto !important;
+    }
+
+    .form-button-search {
+        right: 50%;
     }
 }    

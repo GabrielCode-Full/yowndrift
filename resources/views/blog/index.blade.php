@@ -23,6 +23,7 @@
       {{-- end of alerts --}}
       <div class="row d-flex flex-row justify-content-center align-items-center">
         <div class="col-12">
+            @if(request()->search == null)
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
               <div class="card-body d-flex flex-column flex-md-row p-0">
@@ -66,13 +67,76 @@
                       <div class="p-2 p-sm-0">
                           <h1 class="card-title font-weight-bold text-center text-md-left card-name-date">No post found</h1>
                           <p class="card-text">Would you like to share your knowledge to everyone?</p>
-                          <a href="#" class="btn btn-dark-green d-block d-sm-inline" data-toggle="modal" data-target="#Write">Write a post</a>
+                          @if (Auth::guest())
+                            <a href="/login" class="btn btn-dark-green d-block d-sm-inline">Write a post</a>
+                          @else
+                            <a href="#" class="btn btn-dark-green d-block d-sm-inline" data-toggle="modal" data-target="#Write">Write a post</a>
+                          @endif
                       </div>
                     </div>
                   </div>
                 </div>
             </div>
             @endforelse
+
+            {{-- search else --}}
+            @else 
+
+            @forelse($searches as $search)
+            <div class="card my-2 shadow-sm">
+              <div class="card-body d-flex flex-column flex-md-row p-0">
+                  @if(strtoupper($search->topic) == "#TECHNOLOGY")
+                    <div class="bg-blue d-flex justify-content-center align-items-center">
+                      <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    </div>  
+                  @elseif(strtoupper($search->topic) == "#SCIENCE")
+                    <div class="bg-danger d-flex justify-content-center align-items-center">
+                      <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    </div>
+                  @elseif(strtoupper($search->topic) == "#SOCIETY")
+                    <div class="bg-dark-green d-flex justify-content-center align-items-center">
+                      <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    </div>
+                  @elseif(strtoupper($search->topic) == "#HEALTH")
+                    <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
+                      <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    </div>
+                  @else
+                    <div class="bg-makara d-flex justify-content-center align-items-center">
+                    <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    </div>
+                  @endif
+                  <div class="overflow-hidden p-3">
+                    <p class="card-name-date text-black font-weight-bold"><small class="card-name-date">Published on {{  \Carbon\Carbon::parse ($search->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$search->name}}</span></small></p>
+                    <p class="badge badge-dark">{{$search->topic}}</p>
+                    <h3 class="card-title font-weight-bold">{{$search->title}}</h3>
+                    <p class="card-text text-truncate">{{$search->body}}</p>
+                    <a href="/blog/{{$search->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
+                  </div>
+
+              </div>
+            </div>
+            @empty
+            <div class="row my-3">
+              <div class="col-sm-12">
+                  <div class="card shadow-sm">
+                    <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
+                      <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
+                      <div class="p-2 p-sm-0">
+                          <h1 class="card-title font-weight-bold text-center text-md-left">No post found.</h1>
+                          {{-- <p class="card-text">Would you like to share your knowledge to everyone?</p>
+                          @if (Auth::guest())
+                            <a href="/login" class="btn btn-dark-green d-block d-sm-inline">Write a post</a>
+                          @else
+                            <a href="#" class="btn btn-dark-green d-block d-sm-inline" data-toggle="modal" data-target="#Write">Write a post</a>
+                          @endif --}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            @endforelse
+            @endif
         </div>
       </div>
    </div>

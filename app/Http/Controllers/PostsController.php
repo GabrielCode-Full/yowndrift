@@ -29,7 +29,6 @@ class PostsController extends Controller
     public function index()
     {
 
-        $user = Auth::user();
 
         $posts = DB::table('users')
         ->join('posts', 'posts.user_id', '=', 'users.id')
@@ -37,7 +36,20 @@ class PostsController extends Controller
         ->orderBy('posts.created_at', 'desc')
         ->get();
         
-        return view('blog.index', ["posts" => $posts]);
+        $searches = DB::table('users')
+        ->join('posts', 'posts.user_id', '=', 'users.id')
+        ->where('posts.topic', 'like', '%' . request()->search . '%')
+        ->OrWhere('posts.title', 'like', '%' . request()->search . '%')
+            // ->OrWhere('sku', 'like', '%' . request()->search . '%')
+            // ->OrWhere('category', 'like', '%' . request()->search . '%')
+            // ->OrWhere('brand', 'like', '%' . request()->search . '%')
+            // ->orderBy('product_name', 'asc')
+        ->get();
+
+        return view('blog.index', [
+            "posts" => $posts,
+            "searches" => $searches
+            ]);
         
     }
 
