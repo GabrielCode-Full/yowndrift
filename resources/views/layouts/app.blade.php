@@ -21,6 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    <script src="{{ asset('js/search.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -38,6 +39,22 @@
 <body>
     <div id="app">
         @include('inc.navbar')
+        {{-- for search bar --}}
+        <div class="d-none" id="show-search">
+        <div class="container mt-3 d-flex justify-content-center align-items-center">
+            <form class="form-inline" action="/blog" style="position: relative;">
+                <div class="form-group">
+                    <input class="form-control form-control-sm" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search" style="width: 350px;">
+                </div>
+
+                <div class="form-group" style="position: absolute; right: 0%;">
+                    <button type="submit" class="btn btn-blue btn-sm">
+                        <i class="fas fa-search"></i> 
+                    </button>
+                </div>
+            </form>          
+            </div>
+        </div>
         <main class="py-4 bg-lighty">
             @yield('content')
         </main>

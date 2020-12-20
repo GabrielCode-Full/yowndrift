@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mb-5 p-2 p-lg-5 overflow-hidden">
-           {{-- Alerts --}}
+    {{-- Alerts --}}
       @if (\Session::has('danger'))
       <div id="element" class="container alert alert-danger alert-dismissible fade show" role="alert">
         <h6>{{ \Session::get('danger') }}</h6>
@@ -20,8 +20,9 @@
           </button>
       </div>
       @endif
-      {{-- end of alerts --}}
+    {{-- Row - Tab --}}
     <div class="row d-flex flex-column flex-md-row">
+        {{-- Col - Nav Pills --}}
        <div class="col-11 col-md-3 p-3 p-md-0 mx-auto">
           <div class="nav flex-column nav-pills border shadow-sm" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link disabled d-flex flex-column" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><span>{{Auth::user()->name}}</span><span><small>Personal Settings</small></span></a>
@@ -30,9 +31,14 @@
              {{-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> --}}
           </div>
        </div>
+
+       {{-- Col - Nav Content --}}
        <div class="col-11 col-md-9 mx-auto">
              <div class="tab-content bg-light" id="v-pills-tabContent">
+                {{-- first tab pane --}}
                 <div class="tab-pane fade show active border p-3 shadow-sm" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                
+                {{-- Display User Data if has  --}}
                 @if(isset($user_information))
                     <h4 class="text-light-blue font-weight-bold">Profile Information</h4>
                     <hr>
@@ -67,7 +73,7 @@
                          </div>
                      </form>
                      
-                     <!-- Button trigger modal -->
+                     <!-- Edit - Button trigger modal -->
                      <form>
                         <div class="form-group row mb-0">
                              <div class="col-md-8 offset-md-4">
@@ -76,7 +82,7 @@
                          </div>
                      </form>
                    
-                     <!-- Modal -->
+                     <!-- Edit - Modal Content -->
                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
                          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                          <div class="modal-content">
@@ -156,6 +162,7 @@
                          </div>
                          </div>
                      </div>
+                    {{-- Display if user's profile is empty  --}}
                     @else
                     <h4 class="text-light-blue font-weight-bold">Profile Information</h4>
                     <hr>
@@ -163,6 +170,7 @@
                     <a href= "/account/create"class="btn btn-blue">Add profile</a>
                    @endif
                 </div>
+                {{-- Second tab pane --}}
                 <div class="tab-pane fade border p-3 shadow-sm" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
                     <h4 class="text-danger font-weight-bold">Delete Account</h4>
                     <hr>

@@ -158,13 +158,16 @@
     right: 0%;
 }
 
-@media (max-width: 767px) {
+.to-show {
+    display: block !important;
+}
+/* @media (max-width: 767px) {
 
     .form-button-search {
-        right: 50%;
+        display: none;
     }
 
-}
+} */
 
 @media (max-width: 576px) {
 
@@ -177,7 +180,4 @@
         height: auto !important;
     }
 
-    .form-button-search {
-        right: 50%;
-    }
 }    

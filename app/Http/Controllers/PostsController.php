@@ -40,7 +40,7 @@ class PostsController extends Controller
         ->join('posts', 'posts.user_id', '=', 'users.id')
         ->where('posts.topic', 'like', '%' . request()->search . '%')
         ->OrWhere('posts.title', 'like', '%' . request()->search . '%')
-            // ->OrWhere('sku', 'like', '%' . request()->search . '%')
+        ->OrWhere('users.name', 'like', '%' . request()->search . '%')
             // ->OrWhere('category', 'like', '%' . request()->search . '%')
             // ->OrWhere('brand', 'like', '%' . request()->search . '%')
             // ->orderBy('product_name', 'asc')

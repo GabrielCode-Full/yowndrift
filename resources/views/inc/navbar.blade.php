@@ -1,9 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-bokara-grey">
     <div class="container">
+        {{-- For logo --}}
         <a class="navbar-brand font-weight-bold" href="{{ url('/') }}">
             <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
+        {{-- Toggle icon --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,11 +29,12 @@
                 @endauth
             </ul>
 
-            <ul class="navbar-nav mx-auto" id="hide-search">
-                <li class="nav-item">                 
+            <!-- Center Side Of Navbar -->
+            <ul class="navbar-nav">
+                <li class="nav-item mx-auto d-none d-md-block">                 
                     <form class="form-inline" action="/blog" style="position: relative;">
                         <div class="form-group">
-                            <input class="form-control form-control-sm" type="search" name="search" placeholder="#Topic and Title" aria-label="Search" style="width: 250px;">
+                            <input class="form-control form-control-sm" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search" style="width: 250px;">
                         </div>
 
                         <div class="form-group form-button-search">
@@ -40,6 +43,9 @@
                             </button>
                         </div>
                       </form>          
+                </li>
+                <li class="nav-item d-block d-md-none" id="hide-search">
+                    <a href="#"><i class="fas fa-search text-light"></i></a>
                 </li>
             </ul>
 

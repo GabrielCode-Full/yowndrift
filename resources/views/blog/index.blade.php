@@ -2,7 +2,8 @@
 
 @section('content')
    <div class="container p-3 mt-3">
-        {{-- Alerts --}}
+      
+    {{-- Alerts --}}
       @if (\Session::has('danger'))
       <div id="element" class="container alert alert-danger alert-dismissible fade show" role="alert">
         <h6>{{ \Session::get('danger') }}</h6>
@@ -21,8 +22,10 @@
       </div>
       @endif
       {{-- end of alerts --}}
+
       <div class="row d-flex flex-row justify-content-center align-items-center">
         <div class="col-12">
+          {{-- display if the search is null --}}
             @if(request()->search == null)
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
@@ -65,8 +68,8 @@
                     <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
                       <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
                       <div class="p-2 p-sm-0">
-                          <h1 class="card-title font-weight-bold text-center text-md-left card-name-date">No post found</h1>
-                          <p class="card-text">Would you like to share your knowledge to everyone?</p>
+                          <h3 class="card-title font-weight-bold text-center text-md-left card-name-date">No post has been created</h3>
+                          <p class="card-text text-muted">Would you like to share your knowledge to everyone?</p>
                           @if (Auth::guest())
                             <a href="/login" class="btn btn-dark-green d-block d-sm-inline">Write a post</a>
                           @else
@@ -85,19 +88,19 @@
             @forelse($searches as $search)
             <div class="card my-2 shadow-sm">
               <div class="card-body d-flex flex-column flex-md-row p-0">
-                  @if(strtoupper($search->topic) == "#TECHNOLOGY")
+                  @if(strtoupper($search->topic) == "TECHNOLOGY")
                     <div class="bg-blue d-flex justify-content-center align-items-center">
                       <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>  
-                  @elseif(strtoupper($search->topic) == "#SCIENCE")
+                  @elseif(strtoupper($search->topic) == "SCIENCE")
                     <div class="bg-danger d-flex justify-content-center align-items-center">
                       <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>
-                  @elseif(strtoupper($search->topic) == "#SOCIETY")
+                  @elseif(strtoupper($search->topic) == "SOCIETY")
                     <div class="bg-dark-green d-flex justify-content-center align-items-center">
                       <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>
-                  @elseif(strtoupper($search->topic) == "#HEALTH")
+                  @elseif(strtoupper($search->topic) == "HEALTH")
                     <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
                       <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
                     </div>
@@ -123,13 +126,7 @@
                     <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
                       <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
                       <div class="p-2 p-sm-0">
-                          <h1 class="card-title font-weight-bold text-center text-md-left">No post found.</h1>
-                          {{-- <p class="card-text">Would you like to share your knowledge to everyone?</p>
-                          @if (Auth::guest())
-                            <a href="/login" class="btn btn-dark-green d-block d-sm-inline">Write a post</a>
-                          @else
-                            <a href="#" class="btn btn-dark-green d-block d-sm-inline" data-toggle="modal" data-target="#Write">Write a post</a>
-                          @endif --}}
+                          <h3 class="card-title font-weight-bold text-center text-md-left">No post found</h3>
                       </div>
                     </div>
                   </div>
@@ -141,7 +138,7 @@
       </div>
    </div>
 
-<!-- Modal -->
+<!-- Create post - Modal -->
 <div class="modal fade" id="Write" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="WriteLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -154,8 +151,8 @@
         <form action="/blog" method="POST">
           @csrf
           <div class="form-group">
-              <label for="topic"><span class="badge badge-dark mx-1">#Technology</span><span class="badge badge-dark mx-1">#Science</span><span class="badge badge-dark mx-1">#Health</span><span class="badge badge-dark mx-1">#Society</span></label>
-              <input type="text" class="form-control rounded-0 @error('topic') is-invalid @enderror" id="topic" placeholder="#Topic" name="topic" autofocus style="border-top:none;">
+              <label for="topic"><span class="badge badge-dark mx-1">Technology</span><span class="badge badge-dark mx-1">Science</span><span class="badge badge-dark mx-1">Health</span><span class="badge badge-dark mx-1">Society</span></label>
+              <input type="text" class="form-control rounded-0 @error('topic') is-invalid @enderror" id="topic" placeholder="Topic" name="topic" autofocus style="border-top:none;">
 
               @error('topic')
                 <span class="invalid-feedback" role="alert">

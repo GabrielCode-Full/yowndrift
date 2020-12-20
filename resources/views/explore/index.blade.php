@@ -12,8 +12,8 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title card-name-date font-weight-bold">Technology</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-blue d-block d-sm-inline">Go somewhere</a>
+                      <p class="card-text">Technology is the sum of techniques, skills, methods, and processes used in the production of goods or services or in the accomplishment of objectives, such as scientific investigation.</p>
+                      <a href="/blog?search=technology" class="btn btn-blue d-block d-sm-inline">Explore</a>
                     </div>
                   </div>
             </div>
@@ -24,8 +24,8 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title card-name-date font-weight-bold">Health</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-blue d-block d-sm-inline">Go somewhere</a>
+                      <p class="card-text">Health is a state of physical, mental and social well-being in which disease and infirmity are absent. The meaning of health has evolved over time.</p>
+                      <a href="/blog?search=health" class="btn btn-blue d-block d-sm-inline">Explore</a>
                     </div>
                   </div>
             </div>
@@ -39,8 +39,8 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title card-name-date font-weight-bold">Science</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-blue d-block d-sm-inline">Go somewhere</a>
+                      <p class="card-text">Science, any system of knowledge that is concerned with the physical world and its phenomena and that entails unbiased observations and systematic experimentation.</p>
+                      <a href="/blog?search=science" class="btn btn-blue d-block d-sm-inline">Explore</a>
                     </div>
                   </div>
             </div>
@@ -51,8 +51,8 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title card-name-date font-weight-bold">Society</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-blue d-block d-sm-inline">Go somewhere</a>
+                      <p class="card-text">Society is a group of individuals involved in persistent social interaction sharing the same  social territory, typically subject to the same political authority and dominant cultural expectations.</p>
+                      <a href="/blog?search=society" class="btn btn-blue d-block d-sm-inline">Explore</a>
                     </div>
                   </div>
             </div>
