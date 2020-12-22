@@ -32,12 +32,12 @@
             <!-- Center Side Of Navbar -->
             <ul class="navbar-nav">
                 <li class="nav-item mx-auto d-none d-md-block">                 
-                    <form class="form-inline" action="/blog" style="position: relative;">
+                    <form class="form-inline form-search" action="/blog">
                         <div class="form-group">
-                            <input class="form-control form-control-sm" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search" style="width: 250px;">
+                            <input class="form-control form-control-sm" id="formNav-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
                         </div>
 
-                        <div class="form-group form-button-search">
+                        <div class="form-group form-search-button">
                             <button type="submit" class="btn btn-blue btn-sm">
                                 <i class="fas fa-search"></i> 
                             </button>
@@ -71,7 +71,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/dashboard">
                                 <i class="fas fa-chalkboard mr-3"></i>Dashboard
                              </a>
                             <a class="dropdown-item" href="/account">

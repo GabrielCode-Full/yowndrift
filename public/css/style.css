@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-/* for bootstrap */
-
-/* .navbar-brand {
-    font-family: 'Faster One', cursive;
-} */
-
-/* custom  */
+/* for bootstrap custom */
 *{
     font-family: 'Roboto', sans serif;
 }
@@ -15,13 +7,12 @@
     height: 50px;
     width: 40px;
 }
-
+ /* custom background */
 .bg-blue {
     background-color: #5158dd;
 }
 
 .bg-light-blue {
-    /* background-color: #5f2570; */
     background-color: #464cc2;
 }
 
@@ -45,7 +36,7 @@
     background-color: #28a745;
 }
 
-/* Buttons */
+/* custom buttons */
 
 .btn-makara {
     color: #fff;
@@ -153,7 +144,29 @@
     font-family: 'Roboto Mono', monospace;
 }
 
-.form-button-search {
+/* for explore page - cards */
+.card-explore {
+    height: 355px;
+}
+
+.card-explore-science-society {
+    height: 410px;
+}
+/* for search */
+
+.form-search {
+    position: relative;
+}
+
+.form-search-input {
+    width: 350px;
+}
+
+#formNav-search-input {
+    width: 250px;
+}
+
+.form-search-button {
     position: absolute; 
     right: 0%;
 }
@@ -161,13 +174,17 @@
 .to-show {
     display: block !important;
 }
-/* @media (max-width: 767px) {
 
-    .form-button-search {
-        display: none;
+@media (max-width: 767px) {
+    
+    .card-explore {
+        height: auto !important;
     }
 
-} */
+    .card-explore-science-society {
+        height: auto !important;
+    }
+}
 
 @media (max-width: 576px) {
 
@@ -177,6 +194,10 @@
     }
 
     .card-explore {
+        height: auto !important;
+    }
+
+    .card-explore-science-society {
         height: auto !important;
     }
 

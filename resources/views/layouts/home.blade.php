@@ -4,6 +4,7 @@
   
  
    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+
       {{-- first content --}}
       <div class="row my-3 d-flex flex-row justify-content-center align-items-center">
          <div class="col-6">
@@ -21,6 +22,7 @@
             </div>
          </div>
       </div>
+
       {{-- second content --}}
       <div class="row mt-3 d-flex flex-row justify-content-center align-items-center">
          <div class="col-10 col-sm-6 text-center order-2 order-sm-1">
@@ -34,7 +36,6 @@
             <img class="h-75 w-75 d-block mx-auto" src="{{ asset('img/logo/content_creator.svg') }}" alt="A girl looking for a paper.">
          </div>
       </div>
+      
    </div>
 @endsection
-
-{{-- d-none d-sm-block --}}

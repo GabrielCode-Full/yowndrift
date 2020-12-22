@@ -30,25 +30,25 @@
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
               <div class="card-body d-flex flex-column flex-md-row p-0">
-                  @if(strtoupper($post->topic) == "#TECHNOLOGY")
+                  @if(strtoupper($post->topic) == "TECHNOLOGY")
                     <div class="bg-blue d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                      <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A picture of a drone.">
                     </div>  
-                  @elseif(strtoupper($post->topic) == "#SCIENCE")
+                  @elseif(strtoupper($post->topic) == "SCIENCE")
                     <div class="bg-danger d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                      <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A girl testing her experiment.">
                     </div>
-                  @elseif(strtoupper($post->topic) == "#SOCIETY")
+                  @elseif(strtoupper($post->topic) == "SOCIETY")
                     <div class="bg-dark-green d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                      <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A girl looking in his window.">
                     </div>
-                  @elseif(strtoupper($post->topic) == "#HEALTH")
+                  @elseif(strtoupper($post->topic) == "HEALTH")
                     <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                      <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A boy holding a dumbell.">
                     </div>
                   @else
                     <div class="bg-makara d-flex justify-content-center align-items-center">
-                    <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A boy writing to a white board.">
                     </div>
                   @endif
                   <div class="overflow-hidden p-3">
@@ -137,6 +137,11 @@
         </div>
       </div>
    </div>
+   {{-- <div class="position-sticky">
+    <div class="position-absolute" style="top: 50%; right: 0;">
+      <button type="submit" class="btn btn-blue rounded-circle"><i class="far fa-paper-plane"></i></button>
+    </div>
+  </div> --}}
 
 <!-- Create post - Modal -->
 <div class="modal fade" id="Write" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="WriteLabel" aria-hidden="true">
@@ -167,9 +172,9 @@
                     <strong>{{ $message }}</strong>
                 </span>
               @enderror
-
-              <textarea class="form-control rounded-0 @error('body') is-invalid @enderror" id="text-area" rows="5" placeholder="Your text here" name="body" autofocus style="border-top:none; border-bottom:none;"></textarea>
-
+              {{-- id="text-area"  rows="5" --}}
+              <textarea class="form-control rounded-0 @error('body') is-invalid @enderror" id="editor" placeholder="Your text here" name="body" autofocus style="border-top:none; border-bottom:none;"></textarea>
+                
               @error('body')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -181,6 +186,19 @@
               <button type="submit" class="btn btn-blue rounded-circle"><i class="far fa-paper-plane"></i></button>
           </div>
         </form>
+        {{-- <form action="/blog" method="POST">
+          @csrf
+        
+          <div id="editor">
+            <p>hello</p>
+            <p><br></p>
+          </div>
+
+          <div class="form-group d-flex justify-content-end align-items-end">
+            <button type="submit" class="btn btn-blue rounded-circle"><i class="far fa-paper-plane"></i></button>
+          </div>
+
+      </form> --}}
       </div>
     </div>
   </div>

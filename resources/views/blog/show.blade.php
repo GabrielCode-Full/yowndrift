@@ -7,25 +7,25 @@
             <div class="card my-2 shadow-sm">
               <div class="card-body p-0">
                 @foreach($posts as $post)
-                    @if(strtoupper($post->topic) == "#TECHNOLOGY")
+                    @if(strtoupper($post->topic) == "TECHNOLOGY")
                         <div class="bg-blue d-flex justify-content-center align-items-center">
-                            <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                            <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A picture of a drone.">
                         </div>  
-                    @elseif(strtoupper($post->topic) == "#SCIENCE")
+                    @elseif(strtoupper($post->topic) == "SCIENCE")
                         <div class="bg-danger d-flex justify-content-center align-items-center">
-                            <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                            <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A girl testing her experiment.">
                         </div>
-                    @elseif(strtoupper($post->topic) == "#SOCIETY")
+                    @elseif(strtoupper($post->topic) == "SOCIETY")
                         <div class="bg-dark-green d-flex justify-content-center align-items-center">
-                            <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                            <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A girl looking in his window.">
                         </div>
-                    @elseif(strtoupper($post->topic) == "#HEALTH")
-                        <div class="bg-lighty d-flex justify-content-center align-items-center">
-                            <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                    @elseif(strtoupper($post->topic) == "HEALTH")
+                        <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
+                            <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A boy holding a dumbell.">
                         </div>
                     @else
-                        <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
-                            <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
+                        <div class="bg-makara d-flex justify-content-center align-items-center">
+                            <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="A boy writing to a white board.">
                         </div>
                     @endif
                     <div class="overflow-hidden p-3">

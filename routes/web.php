@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AccountsController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,8 @@ Route::get("/explore", [PostsController::class, "explore"])->name("explore");
 
 Route::resources([
     '/blog' => PostsController::class,
-    '/account' => AccountsController::class
+    '/account' => AccountsController::class,
+    '/dashboard' => DashboardController::class
     ]);
 
 // Route::resource('/blog', PostsController::class)->only(['index'])->middleware('auth');

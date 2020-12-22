@@ -22,32 +22,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     <script src="{{ asset('js/search.js') }}" defer></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <!-- CSS only -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- Theme included stylesheets -->
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+
 </head>
+
 <body>
     <div id="app">
         @include('inc.navbar')
         {{-- for search bar --}}
         <div class="d-none" id="show-search">
         <div class="container mt-3 d-flex justify-content-center align-items-center">
-            <form class="form-inline" action="/blog" style="position: relative;">
+            <form class="form-inline form-search" action="/blog">
                 <div class="form-group">
-                    <input class="form-control form-control-sm" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search" style="width: 350px;">
+                    <input class="form-control form-control-sm form-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
                 </div>
 
-                <div class="form-group" style="position: absolute; right: 0%;">
+                <div class="form-group form-search-button">
                     <button type="submit" class="btn btn-blue btn-sm">
                         <i class="fas fa-search"></i> 
                     </button>
@@ -60,5 +62,11 @@
         </main>
         @include('inc.footer')
     </div>
+
+    <script>
+        var quill = new Quill('#editor', {
+          theme: 'snow'
+        });
+    </script>
 </body>
 </html>
