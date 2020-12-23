@@ -10,7 +10,7 @@
          <div class="col-6">
             <img class="h-75 w-75 d-block mx-auto" src="{{ asset('img/logo/blogging.svg') }}" alt="A girl with a laptop posting something to social media.">
          </div>
-         <div class="col-10 col-sm-6 mb-5 text-center text-sm-left">
+         <div class="col-10 col-sm-6 mb-5 text-left">
             <div class="px-2 px-md-5">
                <h2 class="font-weight-bold card-name-date">Built for anyone</h2>
                <h5 class="text-muted my-3">Yowndrift is a blogging web application, where anyone can share their ideas or knowledge to a specific topic.</h5>
@@ -25,15 +25,15 @@
 
       {{-- second content --}}
       <div class="row mt-3 d-flex flex-row justify-content-center align-items-center">
-         <div class="col-10 col-sm-6 text-center order-2 order-sm-1">
+         <div class="col-10 col-sm-6 ml-0 ml-sm-5 text-left order-2 order-sm-1">
             <div class="px-2 px-md-5">
                <h2 class="font-weight-bold card-name-date">Choose your topic</h2>
                <h5 class="text-muted my-3">There are many topics that might find your interest.</h5>
-               <a href="/explore" class="btn btn-dark-green d-block d-sm-inline">Find a topic</a>
+               <a href="/explore" class="text-success">Find a topic</a>
             </div>
          </div>
-         <div class="col-6 order-1 order-sm-2">
-            <img class="h-75 w-75 d-block mx-auto" src="{{ asset('img/logo/content_creator.svg') }}" alt="A girl looking for a paper.">
+         <div class="col-5 order-1 order-sm-2">
+            <img class="h-75 w-75 d-block mx-auto" src="{{ asset('img/logo/content_creator.svg') }}" alt="A girl looking to a paper.">
          </div>
       </div>
       

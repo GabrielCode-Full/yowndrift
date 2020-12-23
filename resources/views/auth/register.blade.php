@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-11 col-md-6 mt-3 px-3 px-md-0">
+            <a href="/home" class="mb-3 d-inline-block"><i class="fas fa-long-arrow-alt-left mr-2"></i>Home</a>
             <div class="card shadow-sm">
                 <div class="card-header text-center font-weight-bold bg-bokara-grey text-light">Join Yowndrift</div>
 

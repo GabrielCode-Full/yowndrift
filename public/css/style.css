@@ -38,23 +38,23 @@
 
 /* custom buttons */
 
-.btn-makara {
-    color: #fff;
-    background-color:#655B50;
-    border-color: #655B50
+.btn-white {
+    color: #000;
+    background-color: #fff;
+    border-color:  #fff;
  }
   
-.btn-makara:hover {
-    color: #fff;
-    background-color: #5c5248;
-    border-color:  #5c5248;
+.btn-white:hover {
+    color: #000;
+    background-color: #F4F3F0;
+    border-color:  #F4F3F0;
 }
   
-.btn-makara:focus,
-.btn-makara.focus {
+.btn-white:focus,
+.btn-white.focus {
     color: #fff;
-    background-color: #5c5248;
-    border-color:  #5c5248;
+    background-color: #F4F3F0;
+    border-color:  #F4F3F0;
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 

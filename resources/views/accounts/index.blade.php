@@ -85,7 +85,7 @@
                      <!-- Edit - Modal Content -->
                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
                          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                         <div class="modal-content">
+                         <div class="modal-content border-0">
                              <div class="modal-header bg-bokara-grey text-light border-0">
                              <h6 class="modal-title" id="exampleModalLongTitle">Update your profile</h6>
                              <a href="#" class="close text-light" data-dismiss="modal" aria-label="Close">

@@ -36,11 +36,11 @@
                     <p class="card-text text-truncate">{{$post->body}}</p>
                     <hr>
                       <div class="d-flex flex-row justify-content-around align-items-center p-0 m-0">
-                        <a href="/blog/{{$post->post_id}}" class="btn btn-light d-block d-md-inline"><i class="fas fa-chalkboard mr-2 text-primary"></i><span class="d-none d-sm-inline">Read content</span></a>
-                        <a href="dashboard/{{$post->post_id}}/edit" class="btn btn-light d-block d-md-inline"><i class="fas fa-pen mr-2 text-success"></i><span class="d-none d-sm-inline">Edit post</span></a>
+                        <a href="/blog/{{$post->post_id}}" class="btn btn-white d-block d-md-inline"><i class="fas fa-chalkboard mr-0 mr-sm-2 text-primary"></i><span class="d-none d-sm-inline">Read content</span></a>
+                        <a href="dashboard/{{$post->post_id}}/edit" class="btn btn-white d-block d-md-inline"><i class="fas fa-pen mr-0 mr-sm-2 text-success"></i><span class="d-none d-sm-inline">Edit post</span></a>
                         <form class="" action="/dashboard/{{$post->post_id}}" method="POST">
                           @method('DELETE')
-                              <button type="submit" class="btn btn-light d-block d-md-inline"><i class="fas fa-trash-alt mr-2 text-danger"></i><span class="d-none d-sm-inline">Delete post</span></button>
+                              <button type="submit" class="btn btn-white d-block d-md-inline"><i class="fas fa-trash-alt mr-0 mr-sm-2 text-danger"></i><span class="d-none d-sm-inline">Delete post</span></button>
                           @csrf
                         </form>
                     </div>

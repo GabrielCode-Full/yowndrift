@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8 mx-3 mx-md-0">
+        <div class="col-10 col-md-6 mt-3 px-3">
+            <a href="/home" class="mb-3 d-inline-block"><i class="fas fa-long-arrow-alt-left mr-2"></i>Home</a>
             <div class="card shadow-sm">
                 <div class="card-header text-center font-weight-bold bg-bokara-grey text-light">Login to Yowndrift</div>
 
@@ -39,7 +40,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -49,19 +50,19 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-dark-green">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-dark-green btn-block">
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif --}}
                             </div>
                         </div>
                     </form>

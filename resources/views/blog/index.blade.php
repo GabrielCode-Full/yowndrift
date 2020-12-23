@@ -141,7 +141,7 @@
 <!-- Create post - Modal -->
 <div class="modal fade" id="Write" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="WriteLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+    <div class="modal-content border-0">
       <div class="modal-header bg-bokara-grey text-light border-bottom-0">
         Create a post
         <a href="#" class="close text-light" data-dismiss="modal" aria-label="Close">
