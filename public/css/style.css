@@ -55,7 +55,25 @@
     color: #fff;
     background-color: #F4F3F0;
     border-color:  #F4F3F0;
-    box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+}
+
+.btn-selective-yellow {
+    color: rgb(238, 237, 237);
+    background-color: #FFBA00;
+    border-color:  #FFBA00;
+ }
+  
+.btn-selective-yellow:hover {
+    color: rgb(238, 237, 237);
+    background-color: #dba307;
+    border-color:  #dba307;
+}
+  
+.btn-selective-yellow:focus,
+.btn-selective-yellow.focus {
+    color: rgb(238, 237, 237);
+    background-color: #dba307;
+    border-color:  #dba307;
 }
 
 .btn-blue {
@@ -75,7 +93,6 @@
     color: #fff;
     background-color: #464cc2;
     border-color:  #464cc2;
-    box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 
 
@@ -96,7 +113,6 @@
     color: #fff;
     background-color:  #22863a;
     border-color:   #22863a;
-    box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
 }
 
 .btn-outline-blue {

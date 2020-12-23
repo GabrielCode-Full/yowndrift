@@ -12,8 +12,8 @@
          </div>
          <div class="col-10 col-sm-6 mb-5 text-left">
             <div class="px-2 px-md-5">
-               <h2 class="font-weight-bold card-name-date">Built for anyone</h2>
-               <h5 class="text-muted my-3">Yowndrift is a blogging web application, where anyone can share their ideas or knowledge to a specific topic.</h5>
+               <h2 class="font-weight-bold">Built for anyone</h2>
+               <p class="text-muted my-3">Yowndrift is a blogging web application, where anyone can share their ideas or knowledge to a specific topic.</p>
                @if (Auth::guest())
                <a href="/login" class="btn btn-blue d-block d-sm-inline">Get Started</a>
                @else
@@ -27,8 +27,8 @@
       <div class="row mt-3 d-flex flex-row justify-content-center align-items-center">
          <div class="col-10 col-sm-6 ml-0 ml-sm-5 text-left order-2 order-sm-1">
             <div class="px-2 px-md-5">
-               <h2 class="font-weight-bold card-name-date">Choose your topic</h2>
-               <h5 class="text-muted my-3">There are many topics that might find your interest.</h5>
+               <h2 class="font-weight-bold">Choose your topic</h2>
+               <p class="text-muted my-3">There are many topics that might find your interest.</p>
                <a href="/explore" class="text-success">Find a topic</a>
             </div>
          </div>

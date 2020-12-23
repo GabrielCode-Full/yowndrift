@@ -124,9 +124,10 @@
               <div class="col-sm-12">
                   <div class="card shadow-sm">
                     <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
-                      <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
+                      <img class="d-block banner h-50 w-50 mr-5" src="{{ asset('img/logo/web_search.svg ') }}" alt="Products Banner">
                       <div class="p-2 p-sm-0">
-                          <h3 class="card-title font-weight-bold text-center text-md-left">No post found</h3>
+                          <h1 class="card-title font-weight-bold text-center text-md-left">No post found</h1>
+                          <p>Try again.</p>
                       </div>
                     </div>
                   </div>
