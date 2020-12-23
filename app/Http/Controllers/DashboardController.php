@@ -10,6 +10,11 @@ use Carbon\Carbon;
 
 class DashboardController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -63,9 +68,10 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($post_id)
     {
-        //
+        $post = Post::find($post_id);
+        return view('dashboard.edit', ['post' => $post]);
     }
 
     /**
@@ -85,7 +91,7 @@ class DashboardController extends Controller
 
         $post = Post::find($post_id);
         $post->user_id = Auth::id();
-        $post->topic = $request->input('topic');
+        $post->topic = strtolower($request->input('topic'));
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();

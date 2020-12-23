@@ -79,7 +79,7 @@ class PostsController extends Controller
 
         $post = new Post;
         $post->user_id = Auth::id();
-        $post->topic = $request->input('topic');
+        $post->topic = strtolower($request->input('topic'));
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();

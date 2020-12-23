@@ -181,7 +181,7 @@
                      @csrf
                      </form>
                  </div>
-                {{-- <div class="tab-pane fade border p-3" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus molestiae asperiores unde, rerum dolorem odit non iusto recusandae in quis! Enim mollitia, sed quae, facilis ea in tenetur minus nam sint explicabo qui asperiores quod, eum voluptatum! Dolorum, quos rem.</div> --}}
+                {{-- <div class="tab-pane fade border p-3" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"></div> --}}
              </div>
           </div>
        </div>

@@ -29,39 +29,18 @@
             @forelse($posts as $post)
             <div class="card my-2 shadow-sm">
               <div class="card-body d-flex flex-column flex-md-row p-0">
-                  @if(strtoupper($post->topic) == "TECHNOLOGY")
-                    <div class="bg-blue d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/technology.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
-                    </div>  
-                  @elseif(strtoupper($post->topic) == "SCIENCE")
-                    <div class="bg-danger d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/science.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
-                    </div>
-                  @elseif(strtoupper($post->topic) == "SOCIETY")
-                    <div class="bg-dark-green d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/society.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
-                    </div>
-                  @elseif(strtoupper($post->topic) == "HEALTH")
-                    <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
-                      <img src="/img/logo/health.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
-                    </div>
-                  @else
-                    <div class="bg-makara d-flex justify-content-center align-items-center">
-                    <img src="/img/logo/public_article.svg" class="h-75 w-75 d-block d-md-none mx-auto mb-1 mb-md-0 img-custom" alt="...">
-                    </div>
-                  @endif
                   <div class="overflow-hidden p-3">
                     <p class="card-name-date text-black font-weight-bold"><small class="card-name-date"><span class="text-primary">You</span> published this post on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }}</small></p>
                     <p class="badge badge-dark">{{$post->topic}}</p>
                     <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
                     <p class="card-text text-truncate">{{$post->body}}</p>
                     <hr>
-                      <div class="d-flex flex-row justify-content-center align-items-center p-0 m-0">
-                        <a href="/blog/{{$post->post_id}}" class="btn btn-light d-block d-md-inline"><i class="fas fa-chalkboard mr-2 text-primary"></i>Read content</a>
-                        <a href="#" class="btn btn-light d-block d-md-inline" data-toggle="modal" data-target="#Delete"><i class="fas fa-pen mr-2 text-success"></i>Edit post</a>
+                      <div class="d-flex flex-row justify-content-around align-items-center p-0 m-0">
+                        <a href="/blog/{{$post->post_id}}" class="btn btn-light d-block d-md-inline"><i class="fas fa-chalkboard mr-2 text-primary"></i><span class="d-none d-sm-inline">Read content</span></a>
+                        <a href="dashboard/{{$post->post_id}}/edit" class="btn btn-light d-block d-md-inline"><i class="fas fa-pen mr-2 text-success"></i><span class="d-none d-sm-inline">Edit post</span></a>
                         <form class="" action="/dashboard/{{$post->post_id}}" method="POST">
                           @method('DELETE')
-                              <button type="submit" class="btn btn-light d-block d-md-inline"><i class="fas fa-trash-alt mr-2 text-danger"></i>Delete post</button>
+                              <button type="submit" class="btn btn-light d-block d-md-inline"><i class="fas fa-trash-alt mr-2 text-danger"></i><span class="d-none d-sm-inline">Delete post</span></button>
                           @csrf
                         </form>
                     </div>
@@ -106,12 +85,3 @@
       </div>
    </div>
 @endsection
-
-
-{{-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quos, mollitia quidem sit dolore optio quibusdam beatae odio nostrum ad et alias aut quae laboriosam aliquam repudiandae. Corrupti, architecto facilis? --}}
-
-{{-- <form class="" action="/dashboard/{{$post->post_id}}" method="POST">
-  @method('DELETE')
-      <button type="submit" class="btn btn-outline-danger d-block d-md-inline mt-3">Delete post</button>
-  @csrf
-</form> --}}
