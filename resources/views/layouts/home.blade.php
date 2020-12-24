@@ -12,7 +12,7 @@
          </div>
          <div class="col-11 col-sm-6 mb-0 mb-sm-5 text-left">
             <div class="px-2 px-md-5 text-light">
-               <h1 class="font-weight-bold">Built for Bloggers</h1>
+               <h1 class="display-4 font-weight-bold">Built for Bloggers</h1>
                <p class="my-3 text-muted-light">Yowndrift is a blogging web application, where anyone can share their ideas or knowledge on a specific topic.</p>
                @if (Auth::guest())
                <a href="/login" class="btn btn-dark-green d-block d-sm-inline">Get Started</a>
@@ -27,7 +27,7 @@
       <div class="row py-3 py-sm-5 mt-3 d-flex flex-row justify-content-center align-items-center">
          <div class="col-11 col-sm-6 ml-0 ml-sm-5 text-left order-2 order-sm-1">
             <div class="px-2 px-md-5">
-               <h1 class="font-weight-bold">Choose your topic</h1>
+               <h1 class="display-4 font-weight-bold">Choose your topic</h1>
                <p class="text-muted my-3">There are many topics that might find your interest.</p>
                <a href="/explore" class="btn btn-blue d-block d-sm-inline">Find a topic</a>
             </div>

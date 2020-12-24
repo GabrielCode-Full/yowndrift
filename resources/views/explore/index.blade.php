@@ -5,7 +5,7 @@
 
     <div class="container p-3 my-3">
         <div class="row my-0 m-sm-3 d-flex flex-column flex-md-row justify-content-center align-items-center">
-            <div class="col-10 col-md-6 my-3 my-md-0">
+            <div class="col-11 col-md-6 my-3 my-md-0">
                 <div class="card card-explore">
                     <div class="bg-blue d-flex justify-content-center align-items-center">
                         <img class="card-img-top h-50 w-50 d-block mx-auto" src="{{ asset('img/logo/technology.svg ') }}" alt="Card image cap">
@@ -17,7 +17,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-10 col-md-6 my-3 my-md-0">
+            <div class="col-11 col-md-6 my-3 my-md-0">
                 <div class="card card-explore">
                     <div class="bg-selective-yellow d-flex justify-content-center align-items-center">
                         <img class="card-img-top h-50 w-50 d-block mx-auto" src="{{ asset('img/logo/health.svg ') }}" alt="Card image cap">
@@ -32,7 +32,7 @@
         </div>
 
         <div class="row my-0 m-sm-3 d-flex flex-column flex-md-row justify-content-center align-items-center">
-            <div class="col-10 col-md-6 my-3 my-md-0">
+            <div class="col-11 col-md-6 my-3 my-md-0">
                 <div class="card card-explore-science-society">
                     <div class="bg-danger d-flex justify-content-center align-items-center">
                         <img class="card-img-top h-50 w-50 d-block mx-auto" src="{{ asset('img/logo/science.svg ') }}" alt="Card image cap">
@@ -44,7 +44,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-10 col-md-6 my-3 my-md-0">
+            <div class="col-11 col-md-6 my-3 my-md-0">
                 <div class="card card-explore-science-society">
                     <div class="bg-dark-green d-flex justify-content-center align-items-center">
                          <img class="card-img-top h-50 w-50 d-block mx-auto" src="{{ asset('img/logo/society.svg ') }}" alt="Card image cap">
