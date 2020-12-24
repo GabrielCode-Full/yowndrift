@@ -1,7 +1,6 @@
 {{-- http://127.0.0.1:8000/login
     https://yowndrift.herokuapp.com/home --}}
-@if($url == "https://yowndrift.herokuapp.com/login") 
-@elseif($url == "https://yowndrift.herokuapp.com/register") 
+@if($url == "https://yowndrift.herokuapp.com/login" || $url == "https://yowndrift.herokuapp.com/register") 
 @elseif($url == "https://yowndrift.herokuapp.com/home") 
 <nav class="navbar navbar-expand-md navbar-dark bg-bokara-grey">
     <div class="container">
@@ -10,14 +9,22 @@
             <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
+
         {{-- Toggle icon --}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-block d-md-none mt-3">                 
+                    <form class="form-search" action="/blog">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" id="md-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
+                        </div>
+                      </form>          
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="/home">Home</a>
                 </li>
@@ -43,9 +50,6 @@
                             </button>
                         </div>
                       </form>          
-                </li>
-                <li class="nav-item d-block d-md-none" id="hide-search">
-                    <a href="#"><i class="fas fa-search text-light"></i></a>
                 </li>
             </ul>
 
@@ -101,14 +105,22 @@
             <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
+
         {{-- Toggle icon --}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-block d-md-none mt-3">                 
+                    <form class="form-search" action="/blog">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" id="md-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
+                        </div>
+                      </form>          
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/home">Home</a>
                 </li>
@@ -134,9 +146,6 @@
                             </button>
                         </div>
                       </form>          
-                </li>
-                <li class="nav-item d-block d-md-none" id="hide-search">
-                    <a href="#"><i class="fas fa-search text-light"></i></a>
                 </li>
             </ul>
 
@@ -192,14 +201,22 @@
             <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
+
         {{-- Toggle icon --}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-block d-md-none mt-3">                 
+                    <form class="form-search" action="/blog">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" id="md-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
+                        </div>
+                      </form>          
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/home">Home</a>
                 </li>
@@ -207,13 +224,8 @@
                     <a class="nav-link" href="/explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="/blog">Blog</a>
+                    <a class="nav-link active" href="/blog">Blog</a>
                 </li>
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Write</a>
-                    </li>
-                @endauth
             </ul>
 
             <!-- Center Side Of Navbar -->
@@ -230,9 +242,6 @@
                             </button>
                         </div>
                       </form>          
-                </li>
-                <li class="nav-item d-block d-md-none" id="hide-search">
-                    <a href="#"><i class="fas fa-search text-light"></i></a>
                 </li>
             </ul>
 
@@ -288,14 +297,22 @@
             <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
+
         {{-- Toggle icon --}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item d-block d-md-none mt-3">                 
+                    <form class="form-search" action="/blog">
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" id="md-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
+                        </div>
+                      </form>          
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/home">Home</a>
                 </li>
@@ -321,9 +338,6 @@
                             </button>
                         </div>
                       </form>          
-                </li>
-                <li class="nav-item d-block d-md-none" id="hide-search">
-                    <a href="#"><i class="fas fa-search text-light"></i></a>
                 </li>
             </ul>
 

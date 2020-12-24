@@ -37,25 +37,15 @@
 <body class="bg-lighty">
     <div id="app">
         @include('inc.navbar')
-        {{-- for search bar --}}
-        <div class="d-none" id="show-search">
-        <div class="container mt-3 d-flex justify-content-center align-items-center">
-            <form class="form-inline form-search" action="/blog">
-                <div class="form-group">
-                    <input class="form-control form-control-sm form-search-input" type="search" name="search" placeholder="Topic, Title, Author" aria-label="Search">
-                </div>
-
-                <div class="form-group form-search-button">
-                    <button type="submit" class="btn btn-blue btn-sm">
-                        <i class="fas fa-search"></i> 
-                    </button>
-                </div>
-            </form>          
-            </div>
-        </div>
-        <main class="py-4">
-            @yield('content')
-        </main>
+            @if($url == "https://yowndrift.herokuapp.com/home")
+                <main>
+                    @yield('content')
+                </main>
+             @else
+                <main class="py-4">
+                    @yield('content')
+                </main>
+             @endif   
         @include('inc.footer')
     </div>
 

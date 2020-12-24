@@ -7,6 +7,10 @@
     height: 50px;
     width: 40px;
 }
+.text-muted-light {
+    color: rgb(224, 219, 219);
+}
+
  /* custom background */
 .bg-blue {
     background-color: #5158dd;
@@ -36,6 +40,13 @@
     background-color: #28a745;
 }
 
+.bg-gradient {
+    background-image:
+    linear-gradient(
+     180deg,
+     #3e206d, #4e58bc
+    );
+}
 /* custom buttons */
 
 .btn-white {
@@ -58,20 +69,20 @@
 }
 
 .btn-selective-yellow {
-    color: rgb(238, 237, 237);
+    color: #fff;
     background-color: #FFBA00;
     border-color:  #FFBA00;
  }
   
 .btn-selective-yellow:hover {
-    color: rgb(238, 237, 237);
+    color: #fff;
     background-color: #dba307;
     border-color:  #dba307;
 }
   
 .btn-selective-yellow:focus,
 .btn-selective-yellow.focus {
-    color: rgb(238, 237, 237);
+    color: #fff;
     background-color: #dba307;
     border-color:  #dba307;
 }
@@ -182,13 +193,13 @@
     width: 250px;
 }
 
+#md-search-input {
+    width: 100%;
+}
+
 .form-search-button {
     position: absolute; 
     right: 0%;
-}
-
-.to-show {
-    display: block !important;
 }
 
 @media (max-width: 767px) {
@@ -199,6 +210,11 @@
 
     .card-explore-science-society {
         height: auto !important;
+    }
+
+    .home-image {
+        height: 100% !important;
+        width: 100% !important;
     }
 }
 
