@@ -3,20 +3,17 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-11 col-md-6 mt-3 px-3 px-md-0">
+        <div class="col-11 col-md-10 mt-3 px-3">
             <a href="/home" class="mb-3 d-inline-block"><i class="fas fa-long-arrow-alt-left mr-2"></i>Home</a>
-            <div class="card shadow-sm">
-                <div class="card-header text-center font-weight-bold bg-bokara-grey text-light">Join Yowndrift</div>
-
-                <div class="card-body">
+            <h6 class="card-name-date text-center mt-5">Join Yowndrift</h6>
+            <h2 class="font-weight-bold text-center mb-5">Create your account</h2>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+                        <div class="form-group d-flex justify-content-center align-items-center">
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('Username') }}">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -26,11 +23,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group d-flex justify-content-center align-items-center">
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="{{ __('E-Mail Address') }}">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -40,11 +36,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="form-group d-flex justify-content-center align-items-center">
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -54,24 +49,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                        <div class="form-group d-flex justify-content-center align-items-center">
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Confirm Password') }}">
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group d-flex justify-content-center align-items-center">
+                            <div class="col-md-6">
                                 <button type="submit" class="btn btn-blue btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>

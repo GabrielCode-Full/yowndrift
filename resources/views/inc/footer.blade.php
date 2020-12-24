@@ -1,3 +1,3 @@
 <footer class="p-3 mx-auto d-flex justify-content-center align-items-center">
-    <p>&copy; <span class="card-name-date">Yowndrift 2020.<span></p>
+    <h6>&copy; Yowndrift 2020.</h6>
   </footer>

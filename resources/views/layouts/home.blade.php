@@ -12,8 +12,8 @@
          </div>
          <div class="col-10 col-sm-6 mb-5 text-left">
             <div class="px-2 px-md-5">
-               <h2 class="font-weight-bold">Built for anyone</h2>
-               <p class="text-muted my-3">Yowndrift is a blogging web application, where anyone can share their ideas or knowledge to a specific topic.</p>
+               <h2 class="font-weight-bold">Built for Bloggers</h2>
+               <p class="text-muted my-3">Yowndrift is a blogging web application, where anyone can share their ideas or knowledge on a specific topic.</p>
                @if (Auth::guest())
                <a href="/login" class="btn btn-blue d-block d-sm-inline">Get Started</a>
                @else

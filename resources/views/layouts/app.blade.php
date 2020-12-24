@@ -22,7 +22,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     <script src="{{ asset('js/search.js') }}" defer></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,13 +31,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <!-- Theme included stylesheets -->
-    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="bg-lighty">
     <div id="app">
         @include('inc.navbar')
         {{-- for search bar --}}
@@ -57,32 +53,11 @@
             </form>          
             </div>
         </div>
-        <main class="py-4 bg-lighty">
+        <main class="py-4">
             @yield('content')
         </main>
         @include('inc.footer')
     </div>
 
-    <script>
-        var quill = new Quill('#editor', {
-          theme: 'snow'
-        });
-
-        var Clipboard = Quill.import('modules/clipboard');
-        var Delta = Quill.import('delta');
-
-        class PlainClipboard extends Clipboard {
-        convert(html = null) {
-            if (typeof html === 'string') {
-            this.container.innerHTML = html;
-            }
-            let text = this.container.innerText;
-            this.container.innerHTML = '';
-            return new Delta().insert(text);
-        }
-        }
-
-        Quill.register('modules/clipboard', PlainClipboard, true);
-    </script>
 </body>
 </html>
