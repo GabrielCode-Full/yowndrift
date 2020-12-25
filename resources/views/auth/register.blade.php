@@ -26,7 +26,7 @@
                         <div class="form-group d-flex justify-content-center align-items-center">
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="{{ __('E-Mail Address') }}">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="{{ __('Email address') }}">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

@@ -12,7 +12,7 @@
                 <div class="form-group d-flex justify-content-center align-items-center">
     
                     <div class="col-md-6">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="E-mail address">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email address">
     
                         @error('email')
                             <span class="invalid-feedback" role="alert">

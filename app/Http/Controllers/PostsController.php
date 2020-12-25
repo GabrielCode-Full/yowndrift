@@ -28,22 +28,17 @@ class PostsController extends Controller
      */
     public function index()
     {
-
-
+        
         $posts = DB::table('users')
         ->join('posts', 'posts.user_id', '=', 'users.id')
-        // ->where('id', 'LIKE', '%' . Auth::user()->id .  '%')
         ->orderBy('posts.created_at', 'desc')
         ->get();
         
         $searches = DB::table('users')
         ->join('posts', 'posts.user_id', '=', 'users.id')
-        ->where('posts.topic', 'like', '%' . request()->search . '%')
+        ->where('posts.topic', 'like', '%' . strtolower(substr(request()->search, 0)) . '%')
         ->OrWhere('posts.title', 'like', '%' . request()->search . '%')
-        ->OrWhere('users.name', 'like', '%' . request()->search . '%')
-            // ->OrWhere('category', 'like', '%' . request()->search . '%')
-            // ->OrWhere('brand', 'like', '%' . request()->search . '%')
-            // ->orderBy('product_name', 'asc')
+        ->OrWhere('users.name', 'like', '%' .  strtoupper(substr(request()->search, 0, 1)) . strtolower(substr(request()->search, 1)) . '%')
         ->get();
 
         return view('blog.index', [

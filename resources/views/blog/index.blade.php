@@ -68,7 +68,7 @@
                     <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
                       <img class="d-block banner h-25 w-25 mr-5" src="{{ asset('img/logo/no_data.svg ') }}" alt="Products Banner">
                       <div class="p-2 p-sm-0">
-                          <h3 class="card-title font-weight-bold text-center text-md-left card-name-date">No post has been created</h3>
+                          <h3 class="card-title font-weight-bold text-center text-md-left">No post has been created</h3>
                           <p class="card-text text-muted">Would you like to share your knowledge to everyone?</p>
                           @if (Auth::guest())
                             <a href="/login" class="btn btn-dark-green d-block d-sm-inline">Write a post</a>
@@ -120,14 +120,13 @@
               </div>
             </div>
             @empty
-            <div class="row my-3">
+            <div class="row my-2">
               <div class="col-sm-12">
                   <div class="card shadow-sm">
                     <div class="card-body d-flex flex-column flex-md-row justify-content-center align-items-center">
-                      <img class="d-block banner h-50 w-50 mr-5" src="{{ asset('img/logo/web_search.svg ') }}" alt="Products Banner">
+                      <img class="d-block banner h-50 w-50 mr-3" src="{{ asset('img/logo/web_search.svg ') }}" alt="Products Banner">
                       <div class="p-2 p-sm-0">
-                          <h1 class="card-title font-weight-bold text-center text-md-left">No post found</h1>
-                          <p>Try again.</p>
+                          <h3 class="card-title font-weight-bold text-center text-md-left">Oops! We couldn't find what you were looking for.</h3>
                       </div>
                     </div>
                   </div>
@@ -189,6 +188,3 @@
   </div>
 </div>
 @endsection
-
-
-{{-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quos, mollitia quidem sit dolore optio quibusdam beatae odio nostrum ad et alias aut quae laboriosam aliquam repudiandae. Corrupti, architecto facilis? --}}
