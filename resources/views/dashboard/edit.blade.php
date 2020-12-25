@@ -31,7 +31,7 @@
                             </span>
                             @enderror
                             
-                            <textarea class="form-control rounded-0 border-top-0 @error('body') is-invalid @enderror" id="text-area"  rows="5" placeholder="Your text here" name="editor1" value="{{$post->body}}"></textarea>
+                            <textarea class="form-control rounded-0 border-top-0 @error('body') is-invalid @enderror" id="text-area"  rows="5" placeholder="Your text here" name="editor1" value="{!!$post->body!!}"></textarea>
                             
                             @error('body')
                             <span class="invalid-feedback" role="alert">

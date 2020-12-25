@@ -176,6 +176,9 @@
     height: 355px;
 }
 
+.card-custom-body {
+    height: 100px;
+}
 .card-explore-science-society {
     height: 410px;
 }

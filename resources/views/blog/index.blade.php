@@ -55,7 +55,7 @@
                     <p class="card-name-date text-black font-weight-bold"><small class="card-name-date">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$post->name}}</span></small></p>
                     <p class="badge badge-dark">{{$post->topic}}</p>
                     <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
-                    <div class="text-truncate">
+                    <div class="text-truncate card-custom-body">
                       <p class="card-text">{!!$post->body!!}</p>
                     </div>
                     <a href="/blog/{{$post->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
@@ -115,7 +115,7 @@
                     <p class="card-name-date text-black font-weight-bold"><small class="card-name-date">Published on {{  \Carbon\Carbon::parse ($search->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$search->name}}</span></small></p>
                     <p class="badge badge-dark">{{$search->topic}}</p>
                     <h3 class="card-title font-weight-bold">{{$search->title}}</h3>
-                    <div class="text-truncate">
+                    <div class="text-truncate card-custom-body">
                       <p class="card-text text-truncate">{!!$search->body!!}</p>
                     </div>
                     <a href="/blog/{{$search->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
