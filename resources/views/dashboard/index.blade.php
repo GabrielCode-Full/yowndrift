@@ -33,7 +33,9 @@
                     <p class="card-name-date text-black font-weight-bold"><small class="card-name-date"><span class="text-primary">You</span> published this post on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }}</small></p>
                     <p class="badge badge-dark">{{$post->topic}}</p>
                     <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
-                    <p class="card-text text-truncate">{{$post->body}}</p>
+                    <div class="text-truncate">
+                      <p class="card-text">{!!$post->body!!}</p>
+                    </div>
                     <hr>
                       <div class="d-flex flex-row justify-content-around align-items-center p-0 m-0">
                         <a href="/blog/{{$post->post_id}}" class="btn btn-white d-block d-md-inline"><i class="fas fa-chalkboard mr-0 mr-sm-2 text-primary"></i><span class="d-none d-sm-inline">Read content</span></a>

@@ -228,7 +228,7 @@
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Write</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Create Post</a>
                     </li>
                 @endauth
             </ul>

@@ -86,14 +86,14 @@ class DashboardController extends Controller
         $validatedData = $request->validate([
             'topic' => ['required','string'],
             'title' => ['required','string','min:5','max:70'],
-            'body' => ['required','string','min:50'],
+            'editor1' => ['required','string','min:50'],
         ]);
 
         $post = Post::find($post_id);
         $post->user_id = Auth::id();
         $post->topic = strtolower($request->input('topic'));
         $post->title = $request->input('title');
-        $post->body = $request->input('body');
+        $post->body = $request->input('editor1');
         $post->save();
 
         return redirect("/dashboard")->with('success', 'Your post has been updated');

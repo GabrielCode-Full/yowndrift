@@ -55,7 +55,9 @@
                     <p class="card-name-date text-black font-weight-bold"><small class="card-name-date">Published on {{  \Carbon\Carbon::parse ($post->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$post->name}}</span></small></p>
                     <p class="badge badge-dark">{{$post->topic}}</p>
                     <h3 class="card-title font-weight-bold">{{$post->title}}</h3>
-                    <p class="card-text text-truncate">{{$post->body}}</p>
+                    <div class="text-truncate">
+                      <p class="card-text">{!!$post->body!!}</p>
+                    </div>
                     <a href="/blog/{{$post->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
                   </div>
 
@@ -113,7 +115,9 @@
                     <p class="card-name-date text-black font-weight-bold"><small class="card-name-date">Published on {{  \Carbon\Carbon::parse ($search->created_at)->format('F d, Y') }} by<span class="card-name-date text-primary ml-2">{{$search->name}}</span></small></p>
                     <p class="badge badge-dark">{{$search->topic}}</p>
                     <h3 class="card-title font-weight-bold">{{$search->title}}</h3>
-                    <p class="card-text text-truncate">{{$search->body}}</p>
+                    <div class="text-truncate">
+                      <p class="card-text text-truncate">{!!$search->body!!}</p>
+                    </div>
                     <a href="/blog/{{$search->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
                   </div>
 
@@ -170,7 +174,7 @@
                 </span>
               @enderror
               
-              <textarea class="form-control rounded-0 border-top-0 @error('body') is-invalid @enderror" id="text-area"  rows="5" placeholder="Your text here" name="body"></textarea>
+              <textarea class="form-control rounded-0 border-top-0 @error('body') is-invalid @enderror" id="text-area"  rows="5" placeholder="Your text here" name="editor1"></textarea>
                 
               @error('body')
                 <span class="invalid-feedback" role="alert">
