@@ -226,9 +226,11 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="/blog">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Write</a>
-                </li>
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Write</a>
+                    </li>
+                @endauth
             </ul>
 
             <!-- Center Side Of Navbar -->
