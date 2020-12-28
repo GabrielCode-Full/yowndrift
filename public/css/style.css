@@ -63,7 +63,7 @@
   
 .btn-white:focus,
 .btn-white.focus {
-    color: #fff;
+    color: #000;
     background-color: #F4F3F0;
     border-color:  #F4F3F0;
 }
@@ -186,10 +186,6 @@
 
 .form-search {
     position: relative;
-}
-
-.form-search-input {
-    width: 350px;
 }
 
 #formNav-search-input {

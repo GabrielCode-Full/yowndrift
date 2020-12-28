@@ -58,7 +58,7 @@
                     <div class="text-truncate card-custom-body">
                       <p class="card-text">{!!$post->body!!}</p>
                     </div>
-                    <a href="/blog/{{$post->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
+                    <a href="/blog/{{$post->post_id}}" class="btn btn-blue d-block d-md-inline stretched-link">Read content</a>
                   </div>
 
               </div>
@@ -118,7 +118,7 @@
                     <div class="text-truncate card-custom-body">
                       <p class="card-text text-truncate">{!!$search->body!!}</p>
                     </div>
-                    <a href="/blog/{{$search->post_id}}" class="btn btn-outline-blue d-block d-md-inline stretched-link">Read content</a>
+                    <a href="/blog/{{$search->post_id}}" class="btn btn-blue d-block d-md-inline stretched-link">Read content</a>
                   </div>
 
               </div>

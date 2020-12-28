@@ -1,0 +1,91 @@
+:root {
+    --white: #2d2d2d;
+    --black: #fff;
+    --black-025: #393939;
+    --black-050: #3d3d3d;
+    --black-075: #404345;
+    --black-100: #4a4e51;
+    --black-150: #555a5e;
+    --black-200: #697075;
+    --black-300: #7d848d;
+    --black-350: #959ca3;
+    --black-400: #9fa6ad;
+    --black-500: #acb2b8;
+    --black-600: #c4c8cc;
+    --black-700: #cfd2d6;
+    --black-750: #dadee0;
+    --black-800: #e7e8eb;
+    --black-900: #f2f2f3;
+    --orange-050: #473c33;
+    --orange-100: #5e4433;
+    --orange-200: #8d5a2f;
+} 
+ 
+    
+[data-theme="dark"] {
+  background-color: #333 !important;
+  color: #eee;
+}
+
+/* for text */
+[data-theme="dark"] .text-muted, 
+[data-theme="dark"] .card-text {
+  color: var(--black-500) !important;
+}
+
+/* for cards */
+[data-theme="dark"] .card{
+  border: none !important;
+}
+
+[data-theme="dark"] .card-header{
+  background-color: var(--black-100) !important;
+}
+
+[data-theme="dark"] .card-explore, 
+[data-theme="dark"] .card-explore-science-society, 
+[data-theme="dark"] .card-body {
+  background-color: var(--black-050) !important;
+}
+
+[data-theme="dark"] .badge-dark{
+  background-color: var(--black-100) !important;
+  color: var(--black-700) !important;
+}
+
+/* for nav pills */
+[data-theme="dark"] .nav-pills .nav-link.active,
+[data-theme="dark"] .nav-pills .show > .nav-link {
+  color: #eee;
+  background-color: var(--black-050) !important;
+  border-left: 5px #28a745 solid;
+}
+
+[data-theme="dark"] .nav-link.disabled {
+  color: #eee;
+  background-color: var(--black-025) !important;
+  pointer-events: none;
+  cursor: default;
+}
+
+[data-theme="dark"] .tab-content {
+  color: #eee;
+  background-color: var(--black-050) !important;
+}
+
+[data-theme="dark"] .nav-pills,
+[data-theme="dark"] .tab-pane {
+  border: none !important;
+}
+
+[data-theme="dark"] .modal-body{
+  background-color: var(--black-050) !important;
+}
+
+/* [data-theme="dark"] .bg-gradient {
+  background-image:
+    linear-gradient(
+     180deg,
+     var(--white), var(--black-200)
+    );
+} */

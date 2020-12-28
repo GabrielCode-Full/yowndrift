@@ -24,7 +24,7 @@
       </div>
 
       {{-- second content --}}
-      <div class="row py-3 py-sm-5 mt-3 d-flex flex-row justify-content-center align-items-center">
+      <div class="row py-3 py-sm-5 mt-3 d-flex flex-row justify-content-center align-items-center row-home">
          <div class="col-11 col-sm-6 ml-0 ml-sm-5 text-left order-2 order-sm-1">
             <div class="px-2 px-md-5">
                <h1 class="display-4 font-weight-bold">Choose your topic</h1>

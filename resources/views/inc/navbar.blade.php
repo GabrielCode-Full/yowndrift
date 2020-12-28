@@ -52,9 +52,17 @@
                       </form>          
                 </li>
             </ul>
-
+            
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-0 ml-md-3">
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -151,6 +159,14 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-0 ml-md-3">
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -252,6 +268,14 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-0 ml-md-3">
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
@@ -348,6 +372,14 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-0 ml-md-3">
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
