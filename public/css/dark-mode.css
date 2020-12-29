@@ -27,6 +27,10 @@
   color: #eee;
 }
 
+[data-theme="dark"] .bg-bokara-grey{
+  background-color: var(--white) !important;
+}
+
 /* for text */
 [data-theme="dark"] .text-muted, 
 [data-theme="dark"] .card-text {
@@ -35,7 +39,7 @@
 
 /* for cards */
 [data-theme="dark"] .card{
-  border: none !important;
+  border: 1px var(--black-050) solid !important;
 }
 
 [data-theme="dark"] .card-header{
@@ -78,8 +82,29 @@
   border: none !important;
 }
 
+/* for modal */
 [data-theme="dark"] .modal-body{
   background-color: var(--black-050) !important;
+}
+
+/* for buttons */
+[data-theme="dark"] .btn-white {
+  color: #eee;
+  background-color: var(--black-150);
+  border-color:  var(--black-150);
+}
+
+[data-theme="dark"] .btn-white:hover {
+  color: #eee;
+  background-color: var(--black-200);
+  border-color:  var(--black-200);
+}
+
+[data-theme="dark"] .btn-white:focus,
+[data-theme="dark"] .btn-white.focus {
+  color: #eee;
+  background-color: var(--black-200);
+  border-color:  var(--black-200);
 }
 
 /* [data-theme="dark"] .bg-gradient {
