@@ -39,7 +39,7 @@
 
 /* for cards */
 [data-theme="dark"] .card{
-  border: 1px var(--black-050) solid !important;
+  border: none !important;
 }
 
 [data-theme="dark"] .card-header{

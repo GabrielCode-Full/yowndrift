@@ -9,22 +9,12 @@
             <img class="logo" src="{{ asset('img/logo/navbar_logo.png') }}" alt="Yowndrift logo">
             {{ config('app.name', 'Laravel') }}
         </a>
-        <div class="d-flex flex-row align-items-center">
-        {{-- dark mode --}}
-        <ul class="navbar-nav ml-md-auto d-block d-md-none">
-            <li class="nav-item">
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="darkSwitch" />
-                    <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
-                </div>
-            </li>
-        </ul>
 
         {{-- Toggle icon --}}
         <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
-        </div>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
@@ -62,9 +52,9 @@
                       </form>          
                 </li>
             </ul>
-            
+
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav d-none d-md-block ml-md-auto">
+            <ul class="navbar-nav my-2 ml-md-auto ">
                 <li class="nav-item">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="darkSwitch" />
@@ -124,22 +114,10 @@
             {{ config('app.name', 'Laravel') }}
         </a>
 
-        <div class="d-flex flex-row align-items-center">
-            {{-- dark mode --}}
-            <ul class="navbar-nav ml-md-auto d-block d-md-none">
-                <li class="nav-item">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
-                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
-                    </div>
-                </li>
-            </ul>
-    
-            {{-- Toggle icon --}}
-            <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+        {{-- Toggle icon --}}
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -180,7 +158,7 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav d-none d-md-block ml-md-auto">
+            <ul class="navbar-nav my-2 ml-md-auto ">
                 <li class="nav-item">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="darkSwitch" />
@@ -240,22 +218,10 @@
             {{ config('app.name', 'Laravel') }}
         </a>
 
-        <div class="d-flex flex-row align-items-center">
-            {{-- dark mode --}}
-            <ul class="navbar-nav ml-md-auto d-block d-md-none">
-                <li class="nav-item">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
-                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
-                    </div>
-                </li>
-            </ul>
-    
-            {{-- Toggle icon --}}
-            <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+        {{-- Toggle icon --}}
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -274,13 +240,8 @@
                     <a class="nav-link" href="/explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/blog">Blog</a>
+                        <a class="nav-link active" href="/blog">Blog</a>
                 </li>
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Create Post</a>
-                    </li>
-                @endauth
             </ul>
 
             <!-- Center Side Of Navbar -->
@@ -301,7 +262,7 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav d-none d-md-block ml-md-auto">
+            <ul class="navbar-nav my-2 ml-md-auto ">
                 <li class="nav-item">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="darkSwitch" />
@@ -361,22 +322,10 @@
             {{ config('app.name', 'Laravel') }}
         </a>
 
-        <div class="d-flex flex-row align-items-center">
-            {{-- dark mode --}}
-            <ul class="navbar-nav ml-md-auto d-block d-md-none">
-                <li class="nav-item">
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="darkSwitch" />
-                        <label class="custom-control-label text-light" for="darkSwitch">Dark Mode</label>
-                    </div>
-                </li>
-            </ul>
-    
-            {{-- Toggle icon --}}
-            <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+        {{-- Toggle icon --}}
+        <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -417,7 +366,7 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav d-none d-md-block ml-md-auto">
+            <ul class="navbar-nav my-2 ml-md-auto ">
                 <li class="nav-item">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="darkSwitch" />
