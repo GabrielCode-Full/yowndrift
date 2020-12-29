@@ -242,6 +242,11 @@
                 <li class="nav-item">
                         <a class="nav-link active" href="/blog">Blog</a>
                 </li>
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#Write">Create Post</a>
+                    </li>
+                @endauth
             </ul>
 
             <!-- Center Side Of Navbar -->
