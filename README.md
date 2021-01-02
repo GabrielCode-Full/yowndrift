@@ -1,6 +1,6 @@
 # Yowndrift
 
-Yowndrift is a blogging web application, where anyone can share their ideas or knowledge on a specific topic.
+Yowndrift is a blogging web application system, where anyone can share their ideas or knowledge on a specific topic. 
 
 ![forGithubR](https://user-images.githubusercontent.com/61103022/103270087-3f6db600-49f2-11eb-8837-7b34f93540a3.png)
 
