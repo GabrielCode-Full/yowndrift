@@ -68,7 +68,7 @@ class PostsController extends Controller
     {
         $validatedData = $request->validate([
             'topic' => ['required','string'],
-            'title' => ['required','string','min:5','max:70'],
+            'title' => ['required','string','min:5'],
             'editor1' => ['required','string','min:50'],
         ]);
 
