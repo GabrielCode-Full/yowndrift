@@ -8,9 +8,7 @@ Yowndrift is a blogging web application system, where anyone can share their ide
 
 <br>
 
-<img src="https://img.shields.io/badge/laravel%20-%23FF2D20.svg?&style=for-the-badge&logo=laravel&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/>
+<img src="https://img.shields.io/badge/laravel%20-%23FF2D20.svg?&style=for-the-badge&logo=laravel&logoColor=white"/> <img src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/>
 
 # Clone: 
 
@@ -20,6 +18,9 @@ Yowndrift is a blogging web application system, where anyone can share their ide
 * `npm install`
 * `npm run dev`
 * Change the .env file to the setting you want.
-* Delete `Procfile` from the root folder and change the condition in the `resource > inc > navbar.blade.php` and to `layouts > app.blade.php`
-* Example: from `https://yowndrift.herokuapp.com/home` to `http://127.0.0.1:8000/home`
+* Delete `\URL::forceScheme('https');` from app > Providers > AppServiceProvider.php
+* Change the condition in the `resource > inc > navbar.blade.php` and to `layouts > app.blade.php`
+
+**Example:** from `https://yowndrift.herokuapp.com/home` to `http://127.0.0.1:8000/home`
+
 * then run `php artisan serve`
